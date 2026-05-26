@@ -1,0 +1,2732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0A0C09">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Hored ERP">
+<meta name="application-name" content="Hored ERP">
+<meta name="description" content="Hored ERP Ultra Pro — Gestión de eventos, nómina, facturas y finanzas">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22Hored%20ERP%20Ultra%20Pro%22%2C%20%22short_name%22%3A%20%22Hored%20ERP%22%2C%20%22description%22%3A%20%22Sistema%20de%20gesti%C3%B3n%20para%20Hored%20Empresa%20de%20Eventos%22%2C%20%22start_url%22%3A%20%22.%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22orientation%22%3A%20%22any%22%2C%20%22theme_color%22%3A%20%22%230A0C09%22%2C%20%22background_color%22%3A%20%22%230A0C09%22%2C%20%22lang%22%3A%20%22es%22%2C%20%22categories%22%3A%20%5B%22business%22%2C%20%22finance%22%2C%20%22productivity%22%5D%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/svg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjM4IiBmaWxsPSIjMEEwQzA5Ii8%2BPHJlY3QgeD0iMCIgeT0iMTY0IiB3aWR0aD0iMTkyIiBoZWlnaHQ9IjI4IiByeD0iMCIgZmlsbD0iI0E4RDI1QSIvPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyOCIgaGVpZ2h0PSIxOTIiIHJ4PSIwIiBmaWxsPSIjQThEMjVBIi8%2BPHRleHQgeD0iMTEwIiB5PSIxMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSI5NiIgZmlsbD0iI0E4RDI1QSIgdGV4dC1hbmNob3I9Im1pZGRsZSI%2BSDwvdGV4dD48L3N2Zz4%3D%22%2C%20%22sizes%22%3A%20%22192x192%22%2C%20%22type%22%3A%20%22image/svg%2Bxml%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%2C%20%7B%22src%22%3A%20%22data%3Aimage/svg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMiIgZmlsbD0iIzBBMEMwOSIvPjxyZWN0IHg9IjAiIHk9IjQ0MCIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI3MiIgcng9IjAiIGZpbGw9IiNBOEQyNUEiLz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNzIiIGhlaWdodD0iNTEyIiByeD0iMCIgZmlsbD0iI0E4RDI1QSIvPjx0ZXh0IHg9IjMwMCIgeT0iMzIwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iMjU2IiBmaWxsPSIjQThEMjVBIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5IPC90ZXh0Pjwvc3ZnPg%3D%3D%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/svg%2Bxml%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%5D%2C%20%22shortcuts%22%3A%20%5B%7B%22name%22%3A%20%22Facturas%22%2C%20%22short_name%22%3A%20%22Facturas%22%2C%20%22description%22%3A%20%22Crear%20nueva%20factura%22%2C%20%22url%22%3A%20%22.%23facturas%22%7D%2C%20%7B%22name%22%3A%20%22N%C3%B3mina%22%2C%20%22short_name%22%3A%20%22N%C3%B3mina%22%2C%20%22description%22%3A%20%22Gesti%C3%B3n%20de%20n%C3%B3mina%22%2C%20%22url%22%3A%20%22.%23nomina%22%7D%2C%20%7B%22name%22%3A%20%22Dashboard%22%2C%20%22short_name%22%3A%20%22Dashboard%22%2C%20%22description%22%3A%20%22Panel%20principal%22%2C%20%22url%22%3A%20%22.%23dashboard%22%7D%5D%7D">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjM4IiBmaWxsPSIjMEEwQzA5Ii8+PHJlY3QgeD0iMCIgeT0iMTY0IiB3aWR0aD0iMTkyIiBoZWlnaHQ9IjI4IiByeD0iMCIgZmlsbD0iI0E4RDI1QSIvPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyOCIgaGVpZ2h0PSIxOTIiIHJ4PSIwIiBmaWxsPSIjQThEMjVBIi8+PHRleHQgeD0iMTEwIiB5PSIxMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSI5NiIgZmlsbD0iI0E4RDI1QSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SDwvdGV4dD48L3N2Zz4=">
+<title>Hored ERP Ultra Pro</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0A0C09; --s1:#0F1210; --s2:#141814; --s3:#1A1E19; --s4:#202520;
+  --border:rgba(168,210,90,0.09); --border2:rgba(168,210,90,0.22); --border3:rgba(168,210,90,0.35);
+  --green:#A8D25A; --green2:#C4E07A; --green3:#D4F09A;
+  --green-glow:rgba(168,210,90,0.10); --green-glow2:rgba(168,210,90,0.18);
+  --gold:#D4A847; --gold2:#E8C060; --gold-glow:rgba(212,168,71,0.12);
+  --red:#E07070; --red2:#F09090; --blue:#70A8D4; --purple:#A870D4; --cyan:#70D4C4;
+  --text:#E8EDE0; --muted:rgba(232,237,224,0.45); --muted2:rgba(232,237,224,0.22); --muted3:rgba(232,237,224,0.12);
+  --f-display:'Outfit',sans-serif; --f-mono:'IBM Plex Mono',monospace; --f-serif:'Playfair Display',serif;
+  --r:6px; --r2:10px; --r3:14px;
+  --shadow:0 4px 20px rgba(0,0,0,.4); --shadow2:0 8px 40px rgba(0,0,0,.6);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:13px;scroll-behavior:smooth}
+body{font-family:var(--f-display);background:var(--bg);color:var(--text);min-height:100vh;display:flex;overflow:hidden}
+
+/* ── SIDEBAR ── */
+#sb{width:248px;flex-shrink:0;background:var(--s1);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:60;transition:transform .3s}
+.sb-logo{padding:1.2rem 1.1rem .9rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.7rem}
+.sb-mark{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--green),#6aaa20);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-weight:900;font-size:1rem;color:var(--bg);flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 0 18px rgba(168,210,90,.3)}
+.sb-mark::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.25),transparent)}
+.sb-name{font-family:var(--f-display);font-weight:900;font-size:1rem;letter-spacing:.01em}
+.sb-name span{color:var(--green)}
+.sb-ver{font-size:.58rem;color:var(--muted2);font-family:var(--f-mono);letter-spacing:.1em;margin-top:1px}
+.sb-section{padding:.9rem 1rem .3rem;font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted2);font-family:var(--f-mono)}
+.sb-nav{padding:.3rem .5rem;flex:1;overflow-y:auto}
+.sb-nav::-webkit-scrollbar{width:3px}
+.sb-nav::-webkit-scrollbar-thumb{background:var(--border)}
+.ni{display:flex;align-items:center;gap:.65rem;padding:.55rem .75rem;border-radius:var(--r);cursor:pointer;font-size:.78rem;font-weight:400;color:var(--muted);transition:background .15s,color .15s,border-color .15s;margin-bottom:1px;border:1px solid transparent;position:relative}
+.ni:hover{background:var(--green-glow);color:var(--text)}
+.ni.active{background:var(--green-glow2);color:var(--green);border-color:var(--border2);font-weight:500}
+.ni-icon{font-size:.9rem;width:1.2rem;text-align:center;flex-shrink:0}
+.ni-badge{margin-left:auto;font-size:.56rem;font-family:var(--f-mono);background:rgba(168,210,90,.16);color:var(--green);border:1px solid rgba(168,210,90,.22);padding:.1rem .4rem;border-radius:3px}
+.sb-bottom{padding:.8rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.5rem}
+.sb-user{display:flex;align-items:center;gap:.6rem;padding:.5rem;border-radius:var(--r);cursor:pointer;border:1px solid var(--border);transition:border-color .2s}
+.sb-user:hover{border-color:var(--border2)}
+.sb-avatar{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--green),#6aaa20);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--bg);font-family:var(--f-display);flex-shrink:0}
+.sb-uname{font-size:.78rem;font-weight:600}
+.sb-urole{font-size:.62rem;color:var(--muted)}
+
+/* ── TOPBAR ── */
+#main{margin-left:248px;flex:1;display:flex;flex-direction:column;min-height:100vh;overflow:hidden}
+#topbar{background:var(--s1);border-bottom:1px solid var(--border);padding:0 1.5rem;height:50px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;flex-shrink:0}
+.tb-left{display:flex;align-items:center;gap:.8rem}
+.tb-title{font-family:var(--f-display);font-weight:700;font-size:.95rem}
+.tb-breadcrumb{font-size:.68rem;color:var(--muted);font-family:var(--f-mono)}
+.tb-right{display:flex;align-items:center;gap:.7rem}
+.tb-chip{font-size:.62rem;font-family:var(--f-mono);padding:.2rem .65rem;border-radius:3px;border:1px solid;display:flex;align-items:center;gap:.35rem}
+.chip-green{background:rgba(168,210,90,.08);color:var(--green);border-color:rgba(168,210,90,.2)}
+.chip-gold{background:rgba(212,168,71,.08);color:var(--gold);border-color:rgba(212,168,71,.2)}
+.tb-dot{width:6px;height:6px;border-radius:50%;animation:blink 2s infinite}
+.tb-dot.green{background:var(--green)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+#clock{font-size:.65rem;color:var(--muted);font-family:var(--f-mono)}
+
+/* ── CONTENT ── */
+#content{padding:1.3rem;flex:1;overflow-y:auto}
+#content::-webkit-scrollbar{width:5px}
+#content::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.page{display:none}.page.active{display:block}
+
+/* ── GRID ── */
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.2rem}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.2rem}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+.g21{display:grid;grid-template-columns:2fr 1fr;gap:1rem;margin-bottom:1.2rem}
+.g12{display:grid;grid-template-columns:1fr 2fr;gap:1rem;margin-bottom:1.2rem}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin-bottom:1.2rem}
+
+/* ── CARDS ── */
+.card{background:var(--s2);border:1px solid var(--border);border-radius:var(--r2);padding:1.1rem;position:relative;overflow:hidden;transition:border-color .2s}
+.card:hover{border-color:var(--border2)}
+.card-glow{position:absolute;top:-20px;right:-20px;width:100px;height:100px;background:radial-gradient(circle,var(--green-glow),transparent 70%);pointer-events:none}
+.card-glow.gold{background:radial-gradient(circle,var(--gold-glow),transparent 70%)}
+.card-glow.blue{background:radial-gradient(circle,rgba(112,168,212,.12),transparent 70%)}
+.card-glow.red{background:radial-gradient(circle,rgba(224,112,112,.1),transparent 70%)}
+.kpi-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-family:var(--f-mono);margin-bottom:.45rem;display:block}
+.kpi-val{font-family:var(--f-display);font-weight:800;font-size:1.75rem;color:var(--text);line-height:1;margin-bottom:.25rem}
+.kpi-val.green{color:var(--green)}.kpi-val.red{color:var(--red)}.kpi-val.gold{color:var(--gold)}.kpi-val.blue{color:var(--blue)}.kpi-val.cyan{color:var(--cyan)}
+.kpi-sub{font-size:.7rem;color:var(--muted);display:flex;align-items:center;gap:.35rem}
+.kpi-sub.up{color:var(--green)}.kpi-sub.dn{color:var(--red)}
+.kpi-sub::before{content:'▲';font-size:.55rem}.kpi-sub.dn::before{content:'▼'}.kpi-sub.neu::before{content:''}
+.kpi-val.sm{font-size:1.2rem}
+
+/* ── SECTION HEAD ── */
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;gap:.8rem}
+.sh-l .sh-title{font-family:var(--f-display);font-weight:700;font-size:.92rem}
+.sh-l .sh-sub{font-size:.7rem;color:var(--muted);margin-top:.1rem}
+.sh-r{display:flex;gap:.5rem;align-items:center;flex-shrink:0}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .9rem;border-radius:var(--r);font-size:.75rem;font-weight:600;font-family:var(--f-display);cursor:pointer;border:1px solid transparent;transition:all .15s;white-space:nowrap}
+.btn-green{background:var(--green);color:var(--bg);border-color:var(--green)}
+.btn-green:hover{background:var(--green2);border-color:var(--green2)}
+.btn-gold{background:rgba(212,168,71,.15);color:var(--gold);border-color:rgba(212,168,71,.3)}
+.btn-gold:hover{background:rgba(212,168,71,.25)}
+.btn-red{background:rgba(224,112,112,.1);color:var(--red);border-color:rgba(224,112,112,.25)}
+.btn-red:hover{background:rgba(224,112,112,.2)}
+.btn-blue{background:rgba(112,168,212,.1);color:var(--blue);border-color:rgba(112,168,212,.25)}
+.btn-blue:hover{background:rgba(112,168,212,.2)}
+.btn-ghost{background:transparent;color:var(--muted);border-color:var(--border)}
+.btn-ghost:hover{background:var(--muted3);color:var(--text);border-color:var(--border2)}
+.btn-sm{padding:.3rem .65rem;font-size:.7rem}
+.btn-xs{padding:.18rem .5rem;font-size:.65rem}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+
+/* ── TABLES ── */
+.tw{overflow-x:auto;border-radius:var(--r2);border:1px solid var(--border)}
+.tw table{width:100%;border-collapse:collapse}
+.tw th{background:var(--s3);padding:.6rem .8rem;text-align:left;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-family:var(--f-mono);font-weight:500;white-space:nowrap}
+.tw td{padding:.65rem .8rem;border-top:1px solid var(--border);font-size:.78rem;vertical-align:middle}
+.tw tr:hover td{background:var(--muted3)}
+.accion-row{display:flex;gap:.3rem;flex-wrap:wrap}
+.empty{text-align:center;color:var(--muted2);padding:2rem!important}
+.empty-icon{display:block;font-size:1.5rem;margin-bottom:.5rem;opacity:.4}
+
+/* ── BADGES ── */
+.badge{font-size:.62rem;font-family:var(--f-mono);padding:.12rem .45rem;border-radius:3px;border:1px solid;display:inline-block;white-space:nowrap}
+.b-green{background:rgba(168,210,90,.1);color:var(--green);border-color:rgba(168,210,90,.25)}
+.b-gold{background:rgba(212,168,71,.1);color:var(--gold);border-color:rgba(212,168,71,.25)}
+.b-red{background:rgba(224,112,112,.1);color:var(--red);border-color:rgba(224,112,112,.25)}
+.b-blue{background:rgba(112,168,212,.1);color:var(--blue);border-color:rgba(112,168,212,.25)}
+.b-purple{background:rgba(168,112,212,.1);color:var(--purple);border-color:rgba(168,112,212,.25)}
+.b-cyan{background:rgba(112,212,196,.1);color:var(--cyan);border-color:rgba(112,212,196,.25)}
+.b-grey{background:var(--muted3);color:var(--muted);border-color:var(--border)}
+
+/* ── FORMS ── */
+.form-grid{display:grid;gap:.75rem;margin-bottom:.75rem}
+.fg1{grid-template-columns:1fr}
+.fg2{grid-template-columns:1fr 1fr}
+.fg3{grid-template-columns:1fr 1fr 1fr}
+.fg4{grid-template-columns:1fr 1fr 1fr 1fr}
+.field{display:flex;flex-direction:column;gap:.3rem}
+.field label{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-family:var(--f-mono)}
+.field input,.field select,.field textarea{background:var(--s3);border:1px solid var(--border);border-radius:var(--r);padding:.5rem .7rem;font-size:.8rem;color:var(--text);font-family:var(--f-display);outline:none;transition:border-color .15s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--border2)}
+.field select option{background:var(--s3)}
+.field textarea{resize:vertical;min-height:70px;line-height:1.5}
+
+/* ── MODAL ── */
+.moverlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:100;display:none;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px)}
+.moverlay.open{display:flex}
+.modal{background:var(--s2);border:1px solid var(--border2);border-radius:var(--r3);padding:1.4rem;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;box-shadow:var(--shadow2)}
+.modal.xl{max-width:780px}
+.modal.xxl{max-width:960px}
+.modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:.8rem;border-bottom:1px solid var(--border)}
+.modal-title{font-weight:700;font-size:.9rem}
+.modal-close{cursor:pointer;color:var(--muted);font-size:1rem;padding:.2rem;border-radius:4px;transition:color .15s}
+.modal-close:hover{color:var(--text)}
+.modal-footer{display:flex;justify-content:flex-end;gap:.5rem;margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--border)}
+
+/* ── TABS ── */
+.tabs{display:flex;gap:.3rem;border-bottom:1px solid var(--border);margin-bottom:1rem;padding-bottom:0}
+.tab{padding:.55rem 1rem;font-size:.75rem;cursor:pointer;color:var(--muted);border-radius:var(--r) var(--r) 0 0;border:1px solid transparent;border-bottom:none;transition:all .15s;font-weight:500}
+.tab:hover{color:var(--text);background:var(--muted3)}
+.tab.active{color:var(--green);background:var(--green-glow);border-color:var(--border2)}
+.tab-panel{display:none}.tab-panel.active{display:block}
+
+/* ── PROGRESS ── */
+.prog{background:var(--border);border-radius:2px;height:4px;overflow:hidden}
+.prog-f{height:100%;border-radius:2px;transition:width .5s}
+.prog-f.green{background:var(--green)}.prog-f.gold{background:var(--gold)}.prog-f.red{background:var(--red)}.prog-f.blue{background:var(--blue)}
+
+/* ── SUMMARY BOX ── */
+.summary-box{background:var(--s3);border:1px solid var(--border);border-radius:var(--r);padding:.9rem;font-size:.78rem}
+.sum-row{display:flex;justify-content:space-between;padding:.25rem 0;border-bottom:1px solid var(--border)}
+.sum-row:last-child{border-bottom:none;font-weight:700;color:var(--green);font-size:.85rem;padding-top:.5rem}
+.sum-label{color:var(--muted)}
+
+/* ── NÓMINA LIQUIDACIÓN ── */
+.liq-header{background:linear-gradient(135deg,var(--s3),var(--s4));border:1px solid var(--border2);border-radius:var(--r2);padding:1rem;margin-bottom:1rem}
+.liq-emp{font-weight:700;font-size:.95rem;margin-bottom:.2rem}
+.liq-cargo{font-size:.75rem;color:var(--muted)}
+.liq-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.6rem}
+.liq-item{font-size:.72rem}
+.liq-item .lk{color:var(--muted)}
+.liq-item .lv{color:var(--text);font-weight:600;font-family:var(--f-mono)}
+.liq-section{border:1px solid var(--border);border-radius:var(--r);margin-bottom:.7rem;overflow:hidden}
+.liq-sec-head{background:var(--s3);padding:.5rem .8rem;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-family:var(--f-mono);display:flex;justify-content:space-between;align-items:center}
+.liq-line{display:flex;justify-content:space-between;padding:.42rem .8rem;border-top:1px solid var(--border);font-size:.78rem}
+.liq-line.positive .liq-amt{color:var(--green)}
+.liq-line.negative .liq-amt{color:var(--red)}
+.liq-total{background:var(--green-glow);border:1px solid var(--border2);border-radius:var(--r);padding:.75rem 1rem;display:flex;justify-content:space-between;align-items:center}
+.liq-total-label{font-weight:700;font-size:.85rem}
+.liq-total-val{font-weight:900;font-size:1.3rem;color:var(--green);font-family:var(--f-display)}
+.liq-neto-negativo .liq-total-val{color:var(--red)}
+
+/* ── FACTURA PREVIEW ── */
+.fac-preview{background:#fff;color:#1a1a1a;border-radius:var(--r2);padding:1.5rem;font-family:var(--f-display);font-size:.8rem;line-height:1.5}
+.fac-preview h2{font-size:1.1rem;margin-bottom:.2rem}
+.fac-preview .fac-num{color:#5a8a20;font-family:monospace;font-size:.85rem}
+.fac-preview table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.78rem}
+.fac-preview th{background:#f0f5e8;padding:.4rem .6rem;text-align:left;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#555}
+.fac-preview td{padding:.4rem .6rem;border-bottom:1px solid #e8ede0}
+.fac-preview .total-row td{font-weight:700;background:#f8faf4;border-top:2px solid #c0d890}
+
+/* ── CHAT IA ── */
+.chat-area{height:380px;overflow-y:auto;display:flex;flex-direction:column;gap:.7rem;padding:.5rem 0;margin-bottom:1rem}
+.chat-area::-webkit-scrollbar{width:4px}
+.chat-area::-webkit-scrollbar-thumb{background:var(--border)}
+.chat-msg{max-width:80%;padding:.7rem .9rem;border-radius:10px;font-size:.8rem;line-height:1.55}
+.chat-msg.user{align-self:flex-end;background:var(--green-glow2);border:1px solid var(--border2);border-bottom-right-radius:2px}
+.chat-msg.ai{align-self:flex-start;background:var(--s3);border:1px solid var(--border);border-bottom-left-radius:2px}
+.chat-msg.ai .ai-badge{font-size:.58rem;font-family:var(--f-mono);color:var(--green);margin-bottom:.3rem;display:block}
+.chat-input-row{display:flex;gap:.5rem}
+.chat-input-row input{flex:1;background:var(--s3);border:1px solid var(--border);border-radius:var(--r);padding:.55rem .8rem;font-size:.8rem;color:var(--text);font-family:var(--f-display);outline:none;transition:border-color .15s}
+.chat-input-row input:focus{border-color:var(--border2)}
+.ai-typing{display:flex;gap:.3rem;align-items:center;padding:.4rem .6rem}
+.ai-typing span{width:6px;height:6px;border-radius:50%;background:var(--green);animation:typing .9s infinite}
+.ai-typing span:nth-child(2){animation-delay:.15s}
+.ai-typing span:nth-child(3){animation-delay:.3s}
+@keyframes typing{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-4px);opacity:1}}
+
+/* ── TOAST ── */
+#toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--s3);border:1px solid var(--border2);border-radius:var(--r);padding:.6rem 1rem;font-size:.8rem;font-weight:500;z-index:9999;display:none;align-items:center;gap:.5rem;box-shadow:var(--shadow)}
+#toast.show{display:flex;animation:slideUp .2s ease}
+#toast.err{border-color:rgba(224,112,112,.4);color:var(--red)}
+#toast.ok{color:var(--green)}
+@keyframes slideUp{from{transform:translateY(8px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+
+/* ── MOBILE / PWA ── */
+@media(max-width:768px){
+  #sb{transform:translateX(-100%);z-index:200;box-shadow:4px 0 30px rgba(0,0,0,.8)}
+  #sb.sb-open{transform:translateX(0)}
+  #main{margin-left:0}
+  #menu-btn{display:flex!important}
+  .g4,.g5{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:1fr 1fr}
+  .g2,.g21,.g12{grid-template-columns:1fr}
+  #content{padding:.8rem}
+  .tb-title{font-size:.82rem}
+  .kpi-val{font-size:1.3rem}
+  .tw{font-size:.72rem}
+  .form-grid.fg3,.form-grid.fg4{grid-template-columns:1fr 1fr}
+  .form-grid.fg2{grid-template-columns:1fr}
+  .modal{padding:1rem}
+  .modal.xl,.modal.xxl{max-width:100%;margin:.5rem}
+  .fac-item-row{grid-template-columns:1fr 60px}
+  .sh{flex-wrap:wrap;gap:.5rem}
+  .sh-r{flex-wrap:wrap}
+  .liq-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .g4,.g5,.g3{grid-template-columns:1fr}
+  .tb-chip{display:none}
+  .ni{padding:.65rem .75rem}
+}
+/* PWA standalone mode */
+@media(display-mode:standalone){
+  #topbar{padding-top:env(safe-area-inset-top,0px)}
+  body{padding-bottom:env(safe-area-inset-bottom,0px)}
+}
+/* ── MISC ── */
+.pdf-spinner{display:inline-block;width:12px;height:12px;border:2px solid rgba(168,210,90,.3);border-top-color:var(--green);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.info-box{background:var(--green-glow);border:1px solid var(--border2);border-radius:var(--r);padding:.7rem .9rem;font-size:.76rem;color:var(--muted);margin-bottom:.8rem}
+.info-box.warn{background:rgba(212,168,71,.08);border-color:rgba(212,168,71,.2);color:var(--gold)}
+.info-box.err{background:rgba(224,112,112,.08);border-color:rgba(224,112,112,.2);color:var(--red)}
+.divider{border:none;border-top:1px solid var(--border);margin:1rem 0}
+.text-mono{font-family:var(--f-mono)}
+.text-green{color:var(--green)}.text-gold{color:var(--gold)}.text-red{color:var(--red)}.text-muted{color:var(--muted)}
+.sep{color:var(--muted2);padding:0 .3rem}
+.timeline-item{display:flex;gap:.7rem;align-items:flex-start;padding:.5rem 0;border-bottom:1px solid var(--border)}
+.timeline-item:last-child{border-bottom:none}
+.tl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:.25rem}
+.tl-txt{font-size:.78rem;flex:1}
+.tl-time{font-size:.62rem;color:var(--muted);font-family:var(--f-mono);white-space:nowrap}
+.fac-item-row{display:grid;grid-template-columns:1fr 80px 110px 90px;gap:.4rem;align-items:end;margin-bottom:.4rem}
+.tag-list{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.4rem}
+.tag{font-size:.65rem;font-family:var(--f-mono);padding:.1rem .45rem;border-radius:3px;background:var(--muted3);color:var(--muted)}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav id="sb">
+  <div class="sb-logo">
+    <div class="sb-mark">H</div>
+    <div>
+      <div class="sb-name">Hored <span>ERP</span></div>
+      <div class="sb-ver">ULTRA PRO · v3.0</div>
+    </div>
+  </div>
+  <div class="sb-nav">
+    <div class="sb-section">Principal</div>
+    <div class="ni active" onclick="go('dashboard')"><span class="ni-icon">⬡</span>Dashboard</div>
+    <div class="sb-section">Comercial</div>
+    <div class="ni" onclick="go('cotizaciones')"><span class="ni-icon">📊</span>Cotizaciones</div>
+    <div class="ni" onclick="go('eventos')"><span class="ni-icon">🗓</span>Eventos</div>
+    <div class="ni" onclick="go('clientes')"><span class="ni-icon">👤</span>Clientes</div>
+    <div class="sb-section">Documentos</div>
+    <div class="ni" onclick="go('facturas')"><span class="ni-icon">🧾</span>Facturas Electrónicas</div>
+    <div class="ni" onclick="go('recibos')"><span class="ni-icon">📄</span>Recibos de Pago</div>
+    <div class="ni" onclick="go('contratos')"><span class="ni-icon">📋</span>Contratos</div>
+    <div class="sb-section">Operación</div>
+    <div class="ni" onclick="go('inventario')"><span class="ni-icon">📦</span>Inventario</div>
+    <div class="ni" onclick="go('nomina')"><span class="ni-icon">👥</span>Nómina y RRHH</div>
+    <div class="ni" onclick="go('liquidacion')"><span class="ni-icon">💼</span>Liquidación</div>
+    <div class="ni" onclick="go('proveedores')"><span class="ni-icon">🏭</span>Proveedores</div>
+    <div class="sb-section">Finanzas</div>
+    <div class="ni" onclick="go('tesoreria')"><span class="ni-icon">🏦</span>Tesorería</div>
+    <div class="ni" onclick="go('cxc')"><span class="ni-icon">↗</span>Cuentas × Cobrar</div>
+    <div class="ni" onclick="go('cxp')"><span class="ni-icon">↙</span>Cuentas × Pagar</div>
+    <div class="ni" onclick="go('reportes')"><span class="ni-icon">📈</span>Reportes</div>
+    <div class="sb-section">Inteligencia</div>
+    <div class="ni" onclick="go('ia')"><span class="ni-icon">✦</span>Asistente IA</div>
+  </div>
+  <div class="sb-bottom">
+    <div class="sb-user">
+      <div class="sb-avatar">RH</div>
+      <div><div class="sb-uname">Roberto Hored</div><div class="sb-urole">Director General</div></div>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div id="main">
+  <div id="topbar">
+    <div class="tb-left"><button id="menu-btn" onclick="toggleSidebar()" class="btn btn-ghost btn-sm" style="display:none;font-size:1.1rem;padding:.3rem .5rem">☰</button>
+      <div>
+        <span class="tb-title" id="pg-title">Dashboard</span>
+        <div class="tb-breadcrumb" id="pg-bread">Hored ERP / Inicio</div>
+      </div>
+    </div>
+    <div class="tb-right">
+      <div class="tb-chip chip-green"><span class="tb-dot green"></span>DIAN Habilitado</div>
+      <div class="tb-chip chip-gold">SMLV 2025: $1.423.500</div>
+      <span id="clock"></span><button id="pwa-install-btn" class="btn btn-green btn-sm" onclick="installPWA()" style="display:none;gap:.35rem">
+  ⬇ Instalar App
+</button>
+    </div>
+  </div>
+
+  <div id="content">
+
+<!-- ══════════ DASHBOARD ══════════ -->
+<div class="page active" id="pg-dashboard">
+  <div class="g4">
+    <div class="card"><div class="card-glow"></div><span class="kpi-label">Ingresos del Mes</span><div class="kpi-val green" id="di-ing">$0</div><div class="kpi-sub up">Vs mes anterior</div></div>
+    <div class="card"><div class="card-glow gold"></div><span class="kpi-label">Cartera Pendiente</span><div class="kpi-val gold" id="di-cart">$0</div><div class="kpi-sub neu" id="di-cart-n"></div></div>
+    <div class="card"><div class="card-glow red"></div><span class="kpi-label">Nómina Mensual</span><div class="kpi-val red" id="di-nom">$0</div><div class="kpi-sub neu" id="di-nom-n"></div></div>
+    <div class="card"><div class="card-glow blue"></div><span class="kpi-label">Saldo Disponible</span><div class="kpi-val cyan" id="di-saldo">$0</div><div class="kpi-sub neu">Caja + Banco</div></div>
+  </div>
+  <div class="g4" style="margin-bottom:1.2rem">
+    <div class="card"><span class="kpi-label">Eventos Activos</span><div class="kpi-val" id="di-ev">0</div></div>
+    <div class="card"><span class="kpi-label">Cotizaciones</span><div class="kpi-val gold" id="di-cot">0</div></div>
+    <div class="card"><span class="kpi-label">Facturas Abiertas</span><div class="kpi-val red" id="di-fac">0</div></div>
+    <div class="card"><span class="kpi-label">Colaboradores</span><div class="kpi-val blue" id="di-col">0</div></div>
+  </div>
+  <div class="g21">
+    <div class="card">
+      <div class="sh"><div class="sh-l"><div class="sh-title">Actividad Reciente</div></div></div>
+      <div id="tl-list" style="display:flex;flex-direction:column"></div>
+    </div>
+    <div class="card">
+      <div class="sh"><div class="sh-l"><div class="sh-title">Alertas del Sistema</div></div></div>
+      <div id="alerts-list" style="display:flex;flex-direction:column;gap:.5rem"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ COTIZACIONES ══════════ -->
+<div class="page" id="pg-cotizaciones">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Cotizaciones</div><div class="sh-sub">Pipeline comercial de eventos</div></div>
+    <div class="sh-r"><button class="btn btn-green" onclick="openM('m-cotizacion')">+ Nueva Cotización</button></div>
+  </div>
+  <div class="g4" style="margin-bottom:1rem">
+    <div class="card"><span class="kpi-label">Total</span><div class="kpi-val" id="kcot-tot">0</div></div>
+    <div class="card"><span class="kpi-label">Aprobadas</span><div class="kpi-val green" id="kcot-apr">0</div></div>
+    <div class="card"><span class="kpi-label">En revisión</span><div class="kpi-val gold" id="kcot-rev">0</div></div>
+    <div class="card"><span class="kpi-label">Valor Pipeline</span><div class="kpi-val gold" id="kcot-val">$0</div></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>ID</th><th>Cliente</th><th>Tipo</th><th>Fecha Evento</th><th>Personas</th><th>Valor</th><th>Validez</th><th>Estado</th><th>Acciones</th></tr></thead>
+    <tbody id="tb-cotizaciones"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ EVENTOS ══════════ -->
+<div class="page" id="pg-eventos">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Eventos</div><div class="sh-sub">Seguimiento operativo de eventos</div></div>
+    <div class="sh-r"><button class="btn btn-green" onclick="openM('m-evento')">+ Nuevo Evento</button></div>
+  </div>
+  <div class="g4" style="margin-bottom:1rem">
+    <div class="card"><span class="kpi-label">Total</span><div class="kpi-val" id="kev-tot">0</div></div>
+    <div class="card"><span class="kpi-label">Confirmados</span><div class="kpi-val green" id="kev-conf">0</div></div>
+    <div class="card"><span class="kpi-label">En Proceso</span><div class="kpi-val gold" id="kev-proc">0</div></div>
+    <div class="card"><span class="kpi-label">Valor Total</span><div class="kpi-val green" id="kev-val">$0</div></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>ID</th><th>Nombre</th><th>Cliente</th><th>Tipo</th><th>Fecha</th><th>Horario</th><th>Personas</th><th>Valor</th><th>Lugar</th><th>Estado</th><th>Acciones</th></tr></thead>
+    <tbody id="tb-eventos"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ CLIENTES ══════════ -->
+<div class="page" id="pg-clientes">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Clientes</div><div class="sh-sub">CRM y gestión de relaciones</div></div>
+    <div class="sh-r"><button class="btn btn-green" onclick="openM('m-cliente')">+ Nuevo Cliente</button></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Nombre / Razón Social</th><th>NIT / CC</th><th>Ciudad</th><th>Teléfono</th><th>Email</th><th>Eventos</th><th>Valor Total</th><th>Acciones</th></tr></thead>
+    <tbody id="tb-clientes"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ FACTURAS ══════════ -->
+<div class="page" id="pg-facturas">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Facturas Electrónicas</div><div class="sh-sub">DIAN · IVA 19% · Numeración automática</div></div>
+    <div class="sh-r">
+      <button class="btn btn-ghost btn-sm" onclick="go('cxc')">📊 Ver Cartera</button>
+      <button class="btn btn-green" onclick="openM('m-factura')">+ Nueva Factura</button>
+    </div>
+  </div>
+  <div class="g4" style="margin-bottom:1rem">
+    <div class="card"><span class="kpi-label">Total Facturas</span><div class="kpi-val" id="kf-total">0</div></div>
+    <div class="card"><div class="card-glow"></div><span class="kpi-label">Pagadas</span><div class="kpi-val green" id="kf-pag">0</div></div>
+    <div class="card"><div class="card-glow red"></div><span class="kpi-label">Pendientes</span><div class="kpi-val red" id="kf-pend">0</div></div>
+    <div class="card"><div class="card-glow gold"></div><span class="kpi-label">Total Facturado</span><div class="kpi-val gold" id="kf-monto">$0</div></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>N° Factura</th><th>Cliente</th><th>Fecha</th><th>Vence</th><th>Subtotal</th><th>IVA</th><th>Descuento</th><th>Anticipo</th><th>Total</th><th>Estado</th><th>Acciones</th></tr></thead>
+    <tbody id="tb-facturas"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ RECIBOS ══════════ -->
+<div class="page" id="pg-recibos">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Recibos de Pago</div><div class="sh-sub">Comprobantes con QR y firma</div></div>
+    <div class="sh-r"><button class="btn btn-green" onclick="openM('m-recibo')">+ Nuevo Recibo</button></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>N° Recibo</th><th>Cliente</th><th>Concepto</th><th>Monto</th><th>Método</th><th>Referencia</th><th>Fecha</th><th>Recibe</th><th>Acciones</th></tr></thead>
+    <tbody id="tb-recibos"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ CONTRATOS ══════════ -->
+<div class="page" id="pg-contratos">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Contratos</div><div class="sh-sub">Contratos legales con cláusulas y firmas</div></div>
+    <div class="sh-r"><button class="btn btn-green" onclick="openM('m-contrato')">+ Nuevo Contrato</button></div>
+  </div>
+  <div class="g4" style="margin-bottom:1rem">
+    <div class="card"><span class="kpi-label">Total</span><div class="kpi-val" id="kcon-tot">0</div></div>
+    <div class="card"><span class="kpi-label">Firmados</span><div class="kpi-val green" id="kcon-firm">0</div></div>
+    <div class="card"><span class="kpi-label">Pendientes</span><div class="kpi-val gold" id="kcon-pend">0</div></div>
+    <div class="card"><span class="kpi-label">Valor Contratos</span><div class="kpi-val green" id="kcon-val">$0</div></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>N° Contrato</th><th>Cliente</th><th>Evento</th><th>Fecha</th><th>Valor Total</th><th>Anticipo</th><th>Saldo</th><th>Estado</th><th>Acciones</th></tr></thead>
+    <tbody id="tb-contratos"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ INVENTARIO ══════════ -->
+<div class="page" id="pg-inventario">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Inventario</div><div class="sh-sub">Control de activos y disponibilidad en tiempo real</div></div>
+    <div class="sh-r">
+      <select class="btn btn-ghost btn-sm" id="inv-cat" onchange="renderInventario()" style="cursor:pointer">
+        <option value="">Todas las categorías</option>
+        <option>Mobiliario</option><option>Decoración</option><option>Vajilla</option><option>AV</option><option>Textil</option>
+      </select>
+      <select class="btn btn-ghost btn-sm" id="inv-est" onchange="renderInventario()" style="cursor:pointer">
+        <option value="">Todos los estados</option>
+        <option>Disponible</option><option>Alquilado</option><option>Mantenimiento</option>
+      </select>
+      <button class="btn btn-green" onclick="openM('m-item')">+ Agregar Ítem</button>
+    </div>
+  </div>
+  <div class="g4" style="margin-bottom:1rem">
+    <div class="card"><span class="kpi-label">Total Ítems</span><div class="kpi-val" id="ki-tot">0</div></div>
+    <div class="card"><span class="kpi-label">Disponibles</span><div class="kpi-val green" id="ki-disp">0</div></div>
+    <div class="card"><span class="kpi-label">Alquilados</span><div class="kpi-val gold" id="ki-alq">0</div></div>
+    <div class="card"><span class="kpi-label">Mantenimiento</span><div class="kpi-val red" id="ki-mant">0</div></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Ítem</th><th>Categoría</th><th>Stock Total</th><th>Disponible</th><th>Alquilado</th><th>Estado</th><th>Val. Alquiler</th><th>Val. Compra</th><th>Acciones</th></tr></thead>
+    <tbody id="tb-inv"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ NÓMINA ══════════ -->
+<div class="page" id="pg-nomina">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Nómina y RRHH</div><div class="sh-sub">Gestión de colaboradores · SMLV 2025: $1.423.500</div></div>
+    <div class="sh-r">
+      <button class="btn btn-blue" onclick="go('liquidacion')">💼 Liquidar Nómina</button>
+      <button class="btn btn-gold" onclick="cerrarNomina()">💰 Cierre Mensual</button>
+      <button class="btn btn-green" onclick="openM('m-empleado')">+ Colaborador</button>
+    </div>
+  </div>
+  <div class="g5" style="margin-bottom:1rem">
+    <div class="card"><span class="kpi-label">Nómina Bruta</span><div class="kpi-val gold" id="kn-tot">$0</div></div>
+    <div class="card"><span class="kpi-label">Pagado</span><div class="kpi-val green" id="kn-pag">$0</div></div>
+    <div class="card"><span class="kpi-label">Pendiente</span><div class="kpi-val red" id="kn-pend">$0</div></div>
+    <div class="card"><span class="kpi-label">Colaboradores</span><div class="kpi-val" id="kn-num">0</div></div>
+    <div class="card"><span class="kpi-label">Costo Empresa/Mes</span><div class="kpi-val red sm" id="kn-costoEmp">$0</div></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Nombre</th><th>Cargo</th><th>Salario Base</th><th>Tipo</th><th>Fechas</th><th>EPS</th><th>ARL</th><th>Pensión</th><th>Estado Mes</th><th>Acciones</th></tr></thead>
+    <tbody id="tb-nomina"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ LIQUIDACIÓN ══════════ -->
+<div class="page" id="pg-liquidacion">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Liquidación de Nómina</div><div class="sh-sub">Cálculo completo de prestaciones, deducciones y parafiscales · Colombia 2025</div></div>
+    <div class="sh-r">
+      <select class="btn btn-ghost btn-sm" id="liq-emp-sel" onchange="calcLiquidacion()" style="cursor:pointer">
+        <option value="">-- Seleccionar Colaborador --</option>
+      </select>
+      <select class="btn btn-ghost btn-sm" id="liq-tipo-sel" onchange="calcLiquidacion()" style="cursor:pointer">
+        <option value="mensual">Liquidación Mensual</option>
+        <option value="definitiva">Liquidación Definitiva</option>
+        <option value="prima">Sólo Prima de Servicios</option>
+        <option value="vacaciones">Sólo Vacaciones</option>
+        <option value="cesantias">Sólo Cesantías</option>
+      </select>
+      <button class="btn btn-green" onclick="generarColillaPago()">📄 Colilla de Pago</button>
+    </div>
+  </div>
+  <div id="liq-content">
+    <div class="info-box">
+      <strong>Selecciona un colaborador</strong> para calcular su liquidación de nómina con todos los conceptos legales colombianos.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PROVEEDORES ══════════ -->
+<div class="page" id="pg-proveedores">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Proveedores</div><div class="sh-sub">Directorio y gestión de compras</div></div>
+    <div class="sh-r"><button class="btn btn-green" onclick="openM('m-prov')">+ Nuevo Proveedor</button></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Empresa</th><th>Contacto</th><th>Servicio</th><th>Teléfono</th><th>Email</th><th>Calificación</th><th>Acciones</th></tr></thead>
+    <tbody id="tb-prov"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ TESORERÍA ══════════ -->
+<div class="page" id="pg-tesoreria">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Tesorería</div><div class="sh-sub">Control de caja, bancos y fondos</div></div>
+    <div class="sh-r"><button class="btn btn-green" onclick="openM('m-movimiento')">+ Movimiento</button></div>
+  </div>
+  <div class="g4" style="margin-bottom:1rem">
+    <div class="card"><div class="card-glow"></div><span class="kpi-label">Saldo Caja</span><div class="kpi-val green" id="kt-caja">$0</div></div>
+    <div class="card"><span class="kpi-label">Saldo Banco</span><div class="kpi-val green" id="kt-banco">$0</div></div>
+    <div class="card"><div class="card-glow gold"></div><span class="kpi-label">Fondo Arriendo</span><div class="kpi-val gold" id="kt-fondo">$1.200.000</div></div>
+    <div class="card"><span class="kpi-label">Fondo Emergencias</span><div class="kpi-val blue" id="kt-emerg">$500.000</div></div>
+  </div>
+  <div class="g2">
+    <div class="card">
+      <div class="sh"><div class="sh-l"><div class="sh-title">Últimos Movimientos</div></div></div>
+      <div id="tx-list" style="display:flex;flex-direction:column;gap:.4rem;max-height:300px;overflow-y:auto"></div>
+    </div>
+    <div class="card">
+      <div class="sh"><div class="sh-l"><div class="sh-title">Distribución Egresos</div></div></div>
+      <div id="egr-dist" style="display:flex;flex-direction:column;gap:.55rem"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ CXC ══════════ -->
+<div class="page" id="pg-cxc">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Cuentas por Cobrar</div><div class="sh-sub">Cartera y seguimiento de pagos</div></div>
+  </div>
+  <div class="g4" style="margin-bottom:1rem">
+    <div class="card"><span class="kpi-label">Total Cartera</span><div class="kpi-val red" id="kcxc-tot">$0</div></div>
+    <div class="card"><span class="kpi-label">Vencida</span><div class="kpi-val red" id="kcxc-venc">$0</div></div>
+    <div class="card"><span class="kpi-label">Por Vencer</span><div class="kpi-val gold" id="kcxc-prox">$0</div></div>
+    <div class="card"><span class="kpi-label">Clientes en Mora</span><div class="kpi-val" id="kcxc-mora">0</div></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Cliente</th><th>Factura</th><th>Emisión</th><th>Vencimiento</th><th>Valor</th><th>Días</th><th>Estado</th><th>Acción</th></tr></thead>
+    <tbody id="tb-cxc"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ CXP ══════════ -->
+<div class="page" id="pg-cxp">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Cuentas por Pagar</div><div class="sh-sub">Obligaciones y pagos pendientes</div></div>
+    <div class="sh-r"><button class="btn btn-green" onclick="openM('m-cxp')">+ Registrar Obligación</button></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Proveedor / Concepto</th><th>Tipo</th><th>Valor</th><th>Vencimiento</th><th>Estado</th><th>Acción</th></tr></thead>
+    <tbody id="tb-cxp"></tbody>
+  </table></div>
+</div>
+
+<!-- ══════════ REPORTES ══════════ -->
+<div class="page" id="pg-reportes">
+  <div class="sh">
+    <div class="sh-l"><div class="sh-title">Reportes Financieros</div><div class="sh-sub">Análisis integral del negocio</div></div>
+    <div class="sh-r"><button class="btn btn-ghost btn-sm" onclick="renderReportes()">↺ Actualizar</button></div>
+  </div>
+  <div class="tabs" id="rep-tabs">
+    <div class="tab active" onclick="repTab('p&g')">P&G</div>
+    <div class="tab" onclick="repTab('balance')">Balance</div>
+    <div class="tab" onclick="repTab('ventas')">Ventas</div>
+    <div class="tab" onclick="repTab('nomina-rep')">Nómina</div>
+    <div class="tab" onclick="repTab('inventario-rep')">Inventario</div>
+  </div>
+  <div id="rep-content"></div>
+</div>
+
+<!-- ══════════ ASISTENTE IA ══════════ -->
+<div class="page" id="pg-ia">
+  <div class="g2" style="margin-bottom:0">
+    <div>
+      <div class="card" style="margin-bottom:1rem">
+        <div class="sh"><div class="sh-l"><div class="sh-title">✦ Asistente IA Hored</div><div class="sh-sub">Conectado con datos reales del ERP</div></div></div>
+        <div class="chat-area" id="chat-area"></div>
+        <div class="chat-input-row">
+          <input id="chat-in" placeholder="Pregunta sobre tus finanzas, nómina, eventos..." onkeydown="if(event.key==='Enter')sendChat()">
+          <button class="btn btn-green" onclick="sendChat()">Enviar</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:1rem">
+        <div class="sh-title" style="margin-bottom:.8rem;font-size:.82rem">Preguntas Rápidas</div>
+        <div style="display:flex;flex-direction:column;gap:.4rem" id="quick-questions"></div>
+      </div>
+      <div class="card">
+        <div class="sh-title" style="margin-bottom:.8rem;font-size:.82rem">Diagnóstico del Negocio</div>
+        <div id="diagnostico" style="display:flex;flex-direction:column;gap:.6rem"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div><!-- /content -->
+</div><!-- /main -->
+
+<!-- ══════════════════════ MODALS ══════════════════════ -->
+
+<!-- COTIZACIÓN -->
+<div class="moverlay" id="m-cotizacion">
+  <div class="modal xl">
+    <div class="modal-head"><div class="modal-title">📊 Nueva Cotización</div><span class="modal-close" onclick="closeM('m-cotizacion')">✕</span></div>
+    <div class="form-grid fg2"><div class="field"><label>Cliente</label><select id="cot-cli"><option value="">-- Seleccionar --</option></select></div><div class="field"><label>Tipo de Evento</label><select id="cot-tipo"><option>Boda</option><option>Quinceañero</option><option>Grado</option><option>Corporativo</option><option>Cumpleaños</option><option>Social</option></select></div></div>
+    <div class="form-grid fg3"><div class="field"><label>Fecha Evento</label><input id="cot-fecha" type="date"></div><div class="field"><label>N° Personas</label><input id="cot-pers" type="number" placeholder="150"></div><div class="field"><label>Validez (días)</label><input id="cot-valid" type="number" placeholder="15" value="15"></div></div>
+    <div class="form-grid fg2"><div class="field"><label>Lugar del Evento</label><input id="cot-lugar" placeholder="Salón Dorado..."></div><div class="field"><label>Valor Total ($)</label><input id="cot-valor" type="number" placeholder="4500000"></div></div>
+    <div class="form-grid fg1"><div class="field"><label>Observaciones</label><textarea id="cot-obs" rows="2" placeholder="Detalles adicionales..."></textarea></div></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-cotizacion')">Cancelar</button><button class="btn btn-green" onclick="saveCotizacion()">💾 Guardar</button></div>
+  </div>
+</div>
+
+<!-- EVENTO -->
+<div class="moverlay" id="m-evento">
+  <div class="modal xl">
+    <div class="modal-head"><div class="modal-title">🗓 Nuevo Evento</div><span class="modal-close" onclick="closeM('m-evento')">✕</span></div>
+    <div class="form-grid fg2"><div class="field"><label>Nombre del Evento</label><input id="ev-nom" placeholder="Boda García & López"></div><div class="field"><label>Cliente</label><select id="ev-cli"><option value="">-- Seleccionar --</option></select></div></div>
+    <div class="form-grid fg3"><div class="field"><label>Tipo</label><select id="ev-tipo"><option>Boda</option><option>Quinceañero</option><option>Grado</option><option>Corporativo</option><option>Cumpleaños</option></select></div><div class="field"><label>Fecha</label><input id="ev-fecha" type="date"></div><div class="field"><label>Lugar</label><input id="ev-lugar" placeholder="Salón..."></div></div>
+    <div class="form-grid fg4"><div class="field"><label>Hora Inicio</label><input id="ev-hi" type="time" value="16:00"></div><div class="field"><label>Hora Fin</label><input id="ev-hf" type="time" value="02:00"></div><div class="field"><label>Personas</label><input id="ev-pers" type="number" placeholder="150"></div><div class="field"><label>Valor ($)</label><input id="ev-val" type="number" placeholder="4500000"></div></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-evento')">Cancelar</button><button class="btn btn-green" onclick="saveEvento()">💾 Guardar</button></div>
+  </div>
+</div>
+
+<!-- CLIENTE -->
+<div class="moverlay" id="m-cliente">
+  <div class="modal">
+    <div class="modal-head"><div class="modal-title">👤 Nuevo Cliente</div><span class="modal-close" onclick="closeM('m-cliente')">✕</span></div>
+    <div class="form-grid fg2"><div class="field"><label>Nombre / Razón Social</label><input id="cl-nom" placeholder="María García Reyes"></div><div class="field"><label>NIT / Cédula</label><input id="cl-nit" placeholder="1.098.765.432"></div></div>
+    <div class="form-grid fg2"><div class="field"><label>Teléfono</label><input id="cl-tel" placeholder="311 222 3333"></div><div class="field"><label>Email</label><input id="cl-email" type="email" placeholder="correo@ejemplo.com"></div></div>
+    <div class="form-grid fg2"><div class="field"><label>Dirección</label><input id="cl-dir" placeholder="Cra 15 # 80-22"></div><div class="field"><label>Ciudad</label><input id="cl-ciudad" placeholder="Bogotá D.C."></div></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-cliente')">Cancelar</button><button class="btn btn-green" onclick="saveCliente()">💾 Guardar</button></div>
+  </div>
+</div>
+
+<!-- FACTURA -->
+<div class="moverlay" id="m-factura">
+  <div class="modal xxl">
+    <div class="modal-head"><div class="modal-title">🧾 Nueva Factura Electrónica</div><span class="modal-close" onclick="closeM('m-factura')">✕</span></div>
+    <div class="form-grid fg3"><div class="field"><label>Cliente</label><select id="fac-cli"><option value="">-- Seleccionar --</option></select></div><div class="field"><label>Fecha Emisión</label><input id="fac-fecha" type="date"></div><div class="field"><label>Fecha Vencimiento</label><input id="fac-vence" type="date"></div></div>
+    <div class="form-grid fg4"><div class="field"><label>Método de Pago</label><select id="fac-mpago"><option>Transferencia bancaria</option><option>Efectivo</option><option>Nequi/Daviplata</option><option>Cheque</option><option>PSE</option><option>Tarjeta Crédito</option></select></div><div class="field"><label>Descuento (%)</label><input id="fac-desc" type="number" placeholder="0" value="0" min="0" max="100" oninput="updateFacResumen()"></div><div class="field"><label>Anticipo ($)</label><input id="fac-anticipo" type="number" placeholder="0" value="0" oninput="updateFacResumen()"></div><div class="field"><label>IVA</label><select id="fac-iva" onchange="updateFacResumen()"><option value="19">19%</option><option value="5">5%</option><option value="0">Sin IVA</option></select></div></div>
+    <div class="sh-l" style="margin-bottom:.5rem"><div class="sh-title" style="font-size:.82rem">Ítems de Factura</div></div>
+    <div id="fac-items-list" style="display:flex;flex-direction:column;gap:.4rem;margin-bottom:.6rem"></div>
+    <button class="btn btn-ghost btn-sm" onclick="addFacItem()">+ Agregar ítem</button>
+    <div class="summary-box" style="margin-top:.8rem" id="fac-resumen"></div>
+    <div class="form-grid fg1" style="margin-top:.6rem"><div class="field"><label>Notas / Observaciones</label><textarea id="fac-notas" rows="2" placeholder="Notas para el cliente..."></textarea></div></div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeM('m-factura')">Cancelar</button>
+      <button class="btn btn-gold" onclick="previewFactura()">👁 Vista Previa</button>
+      <button class="btn btn-green" id="fac-save-btn" onclick="saveFactura()">💾 Guardar y Generar PDF</button>
+    </div>
+  </div>
+</div>
+
+<!-- RECIBO -->
+<div class="moverlay" id="m-recibo">
+  <div class="modal">
+    <div class="modal-head"><div class="modal-title">📄 Nuevo Recibo de Pago</div><span class="modal-close" onclick="closeM('m-recibo')">✕</span></div>
+    <div class="form-grid fg2"><div class="field"><label>Cliente</label><select id="rec-cli"><option value="">-- Seleccionar --</option></select></div><div class="field"><label>Fecha</label><input id="rec-fecha" type="date"></div></div>
+    <div class="form-grid fg1"><div class="field"><label>Concepto</label><input id="rec-conc" placeholder="Anticipo boda junio 2025"></div></div>
+    <div class="form-grid fg2"><div class="field"><label>Monto ($)</label><input id="rec-monto" type="number" placeholder="1500000"></div><div class="field"><label>Método de Pago</label><select id="rec-mpago"><option>Transferencia bancaria</option><option>Efectivo</option><option>Nequi/Daviplata</option><option>Cheque</option><option>PSE</option></select></div></div>
+    <div class="form-grid fg1"><div class="field"><label>Referencia / N° de Transacción</label><input id="rec-ref" placeholder="TRF-YYYYMMDD-001"></div></div>
+    <div class="form-grid fg1"><div class="field"><label>Observaciones</label><textarea id="rec-obs" rows="2" placeholder="Observaciones del pago..."></textarea></div></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-recibo')">Cancelar</button><button class="btn btn-green" id="rec-save-btn" onclick="saveRecibo()">💾 Guardar</button></div>
+  </div>
+</div>
+
+<!-- CONTRATO -->
+<div class="moverlay" id="m-contrato">
+  <div class="modal xxl">
+    <div class="modal-head"><div class="modal-title">📋 Nuevo Contrato de Servicios</div><span class="modal-close" onclick="closeM('m-contrato')">✕</span></div>
+    <div class="form-grid fg3"><div class="field"><label>Cliente</label><select id="con-cli"><option value="">-- Seleccionar --</option></select></div><div class="field"><label>Evento</label><input id="con-ev" placeholder="Boda García & López"></div><div class="field"><label>Tipo de Evento</label><select id="con-tipo"><option>Boda</option><option>Quinceañero</option><option>Grado</option><option>Corporativo</option><option>Cumpleaños</option></select></div></div>
+    <div class="form-grid fg3"><div class="field"><label>Fecha del Evento</label><input id="con-fev" type="date"></div><div class="field"><label>Hora Inicio</label><input id="con-hi" type="time" value="16:00"></div><div class="field"><label>Hora Fin</label><input id="con-hf" type="time" value="02:00"></div></div>
+    <div class="form-grid fg3"><div class="field"><label>Lugar</label><input id="con-lugar" placeholder="Salón..."></div><div class="field"><label>N° Personas</label><input id="con-pers" type="number" placeholder="150"></div><div class="field"><label>Valor Total ($)</label><input id="con-val" type="number" placeholder="4500000"></div></div>
+    <div class="form-grid fg2"><div class="field"><label>Anticipo ($)</label><input id="con-ant" type="number" placeholder="1500000"></div><div class="field"><label>Fecha Límite Anticipo</label><input id="con-fant" type="date"></div></div>
+    <div class="form-grid fg1"><div class="field"><label>Servicios Incluidos (uno por línea)</label><textarea id="con-serv" rows="4" placeholder="Coordinación general&#10;Decoración floral premium&#10;Alquiler de mobiliario&#10;Sonido e iluminación"></textarea></div></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-contrato')">Cancelar</button><button class="btn btn-green" id="con-save-btn" onclick="saveContrato()">💾 Guardar y Generar PDF</button></div>
+  </div>
+</div>
+
+<!-- INVENTARIO ITEM -->
+<div class="moverlay" id="m-item">
+  <div class="modal">
+    <div class="modal-head"><div class="modal-title">📦 Agregar Ítem de Inventario</div><span class="modal-close" onclick="closeM('m-item')">✕</span></div>
+    <div class="form-grid fg2"><div class="field"><label>Nombre</label><input id="it-nom" placeholder="Silla Tiffany Blanca"></div><div class="field"><label>Categoría</label><select id="it-cat"><option>Mobiliario</option><option>Decoración</option><option>Vajilla</option><option>AV</option><option>Textil</option></select></div></div>
+    <div class="form-grid fg3"><div class="field"><label>Cantidad Total</label><input id="it-qty" type="number" placeholder="100" min="1"></div><div class="field"><label>Valor Alquiler ($)</label><input id="it-alq" type="number" placeholder="3000"></div><div class="field"><label>Valor Compra ($)</label><input id="it-comp" type="number" placeholder="15000"></div></div>
+    <div class="form-grid fg1"><div class="field"><label>Estado Inicial</label><select id="it-est"><option>Disponible</option><option>Mantenimiento</option></select></div></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-item')">Cancelar</button><button class="btn btn-green" onclick="addItem()">💾 Guardar</button></div>
+  </div>
+</div>
+
+<!-- EMPLEADO -->
+<div class="moverlay" id="m-empleado">
+  <div class="modal xl">
+    <div class="modal-head"><div class="modal-title">👥 Nuevo Colaborador</div><span class="modal-close" onclick="closeM('m-empleado')">✕</span></div>
+    <div class="form-grid fg2"><div class="field"><label>Nombre Completo</label><input id="em-nom" placeholder="Ana María López"></div><div class="field"><label>Cargo</label><input id="em-cargo" placeholder="Coordinadora, Chef..."></div></div>
+    <div class="form-grid fg3"><div class="field"><label>Salario Base ($)</label><input id="em-sal" type="number" placeholder="1423500"></div><div class="field"><label>Tipo Contrato</label><select id="em-tipo"><option>Fijo</option><option>Variable</option><option>Comisión</option><option>Prestación de servicios</option><option>Aprendizaje</option></select></div><div class="field"><label>Fecha Ingreso</label><input id="em-fing" type="date"></div></div>
+    <div class="form-grid fg3"><div class="field"><label>EPS</label><input id="em-eps" placeholder="Sura, Compensar..."></div><div class="field"><label>ARL</label><input id="em-arl" placeholder="Positiva..."></div><div class="field"><label>Fondo Pensión</label><input id="em-pension" placeholder="Protección, Porvenir..."></div></div>
+    <div class="form-grid fg2"><div class="field"><label>Cédula</label><input id="em-cc" placeholder="1.098.765.432"></div><div class="field"><label>Cuenta Bancaria</label><input id="em-cuenta" placeholder="Ahorros 1234567890 - Bancolombia"></div></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-empleado')">Cancelar</button><button class="btn btn-green" onclick="addEmpleado()">💾 Guardar</button></div>
+  </div>
+</div>
+
+<!-- PROVEEDOR -->
+<div class="moverlay" id="m-prov">
+  <div class="modal">
+    <div class="modal-head"><div class="modal-title">🏭 Nuevo Proveedor</div><span class="modal-close" onclick="closeM('m-prov')">✕</span></div>
+    <div class="form-grid fg2"><div class="field"><label>Empresa</label><input id="pv-emp" placeholder="Flores del Valle SAS"></div><div class="field"><label>Contacto</label><input id="pv-con" placeholder="Nombre del contacto"></div></div>
+    <div class="form-grid fg2"><div class="field"><label>Servicio</label><input id="pv-serv" placeholder="Catering, Flores, AV..."></div><div class="field"><label>Teléfono</label><input id="pv-tel" placeholder="300 000 0000"></div></div>
+    <div class="form-grid fg2"><div class="field"><label>Email</label><input id="pv-email" type="email" placeholder="correo@proveedor.com"></div><div class="field"><label>Calificación (1-5)</label><input id="pv-cal" type="number" min="1" max="5" value="5"></div></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-prov')">Cancelar</button><button class="btn btn-green" onclick="addProv()">💾 Guardar</button></div>
+  </div>
+</div>
+
+<!-- MOVIMIENTO -->
+<div class="moverlay" id="m-movimiento">
+  <div class="modal">
+    <div class="modal-head"><div class="modal-title">🏦 Registrar Movimiento</div><span class="modal-close" onclick="closeM('m-movimiento')">✕</span></div>
+    <div class="form-grid fg2"><div class="field"><label>Tipo</label><select id="mv-tipo"><option>Ingreso</option><option>Egreso</option></select></div><div class="field"><label>Categoría</label><select id="mv-cat"><option>Evento</option><option>Nómina</option><option>Arriendo</option><option>ERP</option><option>Compras</option><option>Fondo Arriendo</option><option>Fondo Emergencia</option><option>Parafiscales</option><option>Impuestos</option><option>Otro</option></select></div></div>
+    <div class="form-grid fg2"><div class="field"><label>Monto ($)</label><input id="mv-monto" type="number" placeholder="500000"></div><div class="field"><label>Fecha</label><input id="mv-fecha" type="date"></div></div>
+    <div class="form-grid fg1"><div class="field"><label>Descripción</label><input id="mv-desc" placeholder="Descripción del movimiento"></div></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-movimiento')">Cancelar</button><button class="btn btn-green" onclick="addMovimiento()">✓ Registrar</button></div>
+  </div>
+</div>
+
+<!-- CXP -->
+<div class="moverlay" id="m-cxp">
+  <div class="modal">
+    <div class="modal-head"><div class="modal-title">↙ Nueva Obligación</div><span class="modal-close" onclick="closeM('m-cxp')">✕</span></div>
+    <div class="form-grid fg2"><div class="field"><label>Proveedor / Concepto</label><input id="cxp-prov" placeholder="Suscripción ERP, Arriendo..."></div><div class="field"><label>Tipo</label><select id="cxp-tipo"><option>Fija mensual</option><option>Variable</option><option>Única vez</option></select></div></div>
+    <div class="form-grid fg2"><div class="field"><label>Valor ($)</label><input id="cxp-val" type="number" placeholder="500000"></div><div class="field"><label>Vencimiento</label><input id="cxp-venc" type="date"></div></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-cxp')">Cancelar</button><button class="btn btn-green" onclick="addCXP()">💾 Guardar</button></div>
+  </div>
+</div>
+
+<!-- COLILLA PAGO -->
+<div class="moverlay" id="m-colilla">
+  <div class="modal xl">
+    <div class="modal-head"><div class="modal-title">📄 Colilla de Pago</div><span class="modal-close" onclick="closeM('m-colilla')">✕</span></div>
+    <div id="colilla-content"></div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="closeM('m-colilla')">Cerrar</button><button class="btn btn-green" onclick="imprimirColilla()">🖨 Imprimir</button></div>
+  </div>
+</div>
+
+<div id="toast"><span id="toast-txt"></span></div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  STORE
+// ═══════════════════════════════════════════════════════
+const SMLV = 1423500; // SMLV Colombia 2025
+const AUXILIO_TRANSPORTE = 200000; // 2025
+
+const S = {
+  clientes: [
+    {id:1,nom:'María García Reyes',nit:'1.098.765.432',tel:'311 222 3333',email:'maria@correo.com',dir:'Cra 15 # 80-22',ciudad:'Bogotá D.C.'},
+    {id:2,nom:'Familia Mora Vargas',nit:'900.555.111-2',tel:'314 888 9999',email:'mora@correo.com',dir:'Cl 45 # 10-15',ciudad:'Medellín'},
+    {id:3,nom:'Tecnoandina S.A.',nit:'890.123.456-1',tel:'601 222 3333',email:'eventos@tecnoandina.co',dir:'Av El Dorado # 68B-31',ciudad:'Bogotá D.C.'},
+  ],
+  cotizaciones: [
+    {id:'COT-2025-001',cli:'María García Reyes',tipo:'Boda',fecha:'2025-06-07',pers:180,valor:4500000,lugar:'Salón Dorado Bogotá',obs:'',estado:'Aprobada',validez:15},
+    {id:'COT-2025-002',cli:'Familia Mora Vargas',tipo:'Quinceañero',fecha:'2025-07-15',pers:120,valor:2800000,lugar:'Casa evento Medellín',obs:'',estado:'En revisión',validez:15},
+    {id:'COT-2025-003',cli:'Deisy Vargas',tipo:'Grado',fecha:'2025-08-10',pers:80,valor:1800000,lugar:'PH edificio',obs:'',estado:'Enviada',validez:10},
+  ],
+  eventos: [
+    {id:'EV-001',nom:'Boda García & Reyes',cli:'María García Reyes',tipo:'Boda',fecha:'2025-06-07',hi:'4:00 PM',hf:'2:00 AM',pers:180,val:4500000,lugar:'Salón Dorado',estado:'Confirmado'},
+    {id:'EV-002',nom:'Quinceañero Valentina',cli:'Familia Mora Vargas',tipo:'Quinceañero',fecha:'2025-05-25',hi:'5:00 PM',hf:'1:00 AM',pers:120,val:2800000,lugar:'Casa Evento Medellín',estado:'Realizado'},
+    {id:'EV-003',nom:'Gala Tecnoandina 2025',cli:'Tecnoandina S.A.',tipo:'Corporativo',fecha:'2025-06-20',hi:'6:00 PM',hf:'12:00 AM',pers:300,val:6000000,lugar:'Hotel Tequendama',estado:'En proceso'},
+    {id:'EV-004',nom:'Grado Medicina UNAL',cli:'Deisy Vargas',tipo:'Grado',fecha:'2025-07-12',hi:'3:00 PM',hf:'10:00 PM',pers:80,val:1800000,lugar:'PH Edificio Colpatria',estado:'Cotización'},
+  ],
+  facturas: [
+    {num:'FE-2025-001',cli:'María García Reyes',fecha:'2025-05-10',vence:'2025-06-10',items:[{desc:'Coordinación boda completa',qty:1,vu:2500000},{desc:'Decoración floral premium',qty:15,vu:85000},{desc:'Alquiler mobiliario completo',qty:1,vu:800000}],desc:5,iva:19,anticipo:1500000,mpago:'Transferencia bancaria',notas:'Gracias por confiar en Hored.',estado:'Pendiente'},
+    {num:'FE-2025-002',cli:'Familia Mora Vargas',fecha:'2025-05-15',vence:'2025-05-30',items:[{desc:'Quinceañero completo',qty:1,vu:2800000}],desc:0,iva:19,anticipo:900000,mpago:'Nequi/Daviplata',notas:'',estado:'Pagada'},
+    {num:'FE-2025-003',cli:'Tecnoandina S.A.',fecha:'2025-05-20',vence:'2025-06-20',items:[{desc:'Gala corporativa producción',qty:1,vu:4500000},{desc:'Catering premium 300 personas',qty:1,vu:1500000}],desc:0,iva:19,anticipo:2000000,mpago:'Cheque',notas:'',estado:'Pendiente'},
+  ],
+  recibos:[
+    {num:'RP-2025-001',cli:'María García Reyes',conc:'Anticipo boda García & Reyes',monto:1500000,mpago:'Transferencia bancaria',ref:'TRF-20250510-001',obs:'Anticipo 33%',fecha:'2025-05-10',recibe:'Roberto Hored'},
+    {num:'RP-2025-002',cli:'Tecnoandina S.A.',conc:'Anticipo Gala Corporativa',monto:2000000,mpago:'Cheque',ref:'CHQ-0045231',obs:'Anticipo 33%',fecha:'2025-05-20',recibe:'Roberto Hored'},
+  ],
+  contratos:[
+    {num:'HOR-2025-001',cli:'María García Reyes',ev:'Boda García & Reyes',tipo:'Boda',fev:'2025-06-07',hi:'4:00 PM',hf:'2:00 AM',lugar:'Salón Dorado',pers:180,val:4500000,ant:1500000,fant:'2025-05-10',serv:['Coordinación general','Decoración floral','Mobiliario completo','Sonido e iluminación'],estado:'Firmado'},
+    {num:'HOR-2025-002',cli:'Tecnoandina S.A.',ev:'Gala Corporativa 2025',tipo:'Corporativo',fev:'2025-06-20',hi:'6:00 PM',hf:'12:00 AM',lugar:'Hotel Tequendama',pers:300,val:6000000,ant:2000000,fant:'2025-05-20',serv:['Producción audiovisual','Catering premium','Decoración','Coordinación ejecutiva'],estado:'Pendiente firma'},
+  ],
+  inventario:[
+    {nom:'Silla Tiffany Blanca',cat:'Mobiliario',qty:150,disp:80,alq:70,est:'Disponible',valAlq:3000,valComp:8000},
+    {nom:'Mesa Redonda 1.8m',cat:'Mobiliario',qty:30,disp:15,alq:15,est:'Disponible',valAlq:15000,valComp:80000},
+    {nom:'Mantel Blanco Premium',cat:'Textil',qty:100,disp:60,alq:40,est:'Disponible',valAlq:2000,valComp:25000},
+    {nom:'Centro Mesa Floral',cat:'Decoración',qty:50,disp:20,alq:30,est:'Alquilado',valAlq:25000,valComp:15000},
+    {nom:'Vajilla Completa x12',cat:'Vajilla',qty:20,disp:8,alq:12,est:'Disponible',valAlq:50000,valComp:250000},
+    {nom:'Sistema de Sonido',cat:'AV',qty:3,disp:1,alq:2,est:'Alquilado',valAlq:200000,valComp:2500000},
+    {nom:'Iluminación LED Set',cat:'AV',qty:5,disp:2,alq:2,est:'Disponible',valAlq:150000,valComp:1800000},
+    {nom:'Carpa 6x9m',cat:'Mobiliario',qty:4,disp:1,alq:0,est:'Mantenimiento',valAlq:300000,valComp:3500000},
+  ],
+  empleados:[
+    {nom:'Anamilena Ortiz',cargo:'Coordinadora Eventos',sal:1500000,tipo:'Fijo',eps:'Compensar',arl:'Positiva',pension:'Protección',fing:'2023-01-15',cc:'1.023.456.789',cuenta:'Ahorros 123456 - Bancolombia',estado:'Pendiente'},
+    {nom:'Leisy Ramírez',cargo:'Logística y Montaje',sal:1423500,tipo:'Fijo',eps:'Sura',arl:'Positiva',pension:'Porvenir',fing:'2023-06-01',cc:'1.034.567.890',cuenta:'Ahorros 234567 - Davivienda',estado:'Pendiente'},
+    {nom:'Sandra Pérez',cargo:'Diseño y Decoración',sal:1600000,tipo:'Fijo',eps:'Coomeva',arl:'Colmena',pension:'Colfondos',fing:'2022-03-10',cc:'1.045.678.901',cuenta:'Ahorros 345678 - Banco de Bogotá',estado:'Pagado'},
+    {nom:'Esther Morales',cargo:'Asistente General',sal:1423500,tipo:'Fijo',eps:'Nueva EPS',arl:'Positiva',pension:'Porvenir',fing:'2024-01-20',cc:'1.056.789.012',cuenta:'Ahorros 456789 - Bancolombia',estado:'Pagado'},
+    {nom:'Pechy Suárez',cargo:'Chef / Catering',sal:1800000,tipo:'Variable',eps:'Sanitas',arl:'Suratep',pension:'Protección',fing:'2023-09-01',cc:'1.067.890.123',cuenta:'Ahorros 567890 - Nequi',estado:'Pendiente'},
+    {nom:'Roberto Hored',cargo:'Director General',sal:3500000,tipo:'Fijo',eps:'Compensar',arl:'Positiva',pension:'Protección',fing:'2020-01-01',cc:'79.456.789',cuenta:'Corriente 678901 - Bancolombia',estado:'Pagado'},
+  ],
+  proveedores:[
+    {emp:'Flores del Valle SAS',con:'Ana Ríos',serv:'Decoración Floral',tel:'312 444 5555',email:'flores@valle.co',cal:5},
+    {emp:'Sonido Pro Ltda',con:'Mario Gómez',serv:'Audio Visual',tel:'310 666 7777',email:'mario@sonidopro.co',cal:4},
+    {emp:'Delicias Catering',con:'Carmen López',serv:'Catering Premium',tel:'313 999 0000',email:'catering@delicias.co',cal:5},
+    {emp:'Muebles y Eventos SAS',con:'Luis Torres',serv:'Mobiliario',tel:'315 111 2222',email:'luis@mueventos.co',cal:4},
+  ],
+  movimientos:[
+    {tipo:'Ingreso',cat:'Evento',desc:'Boda García & Reyes - pago parcial',monto:3500000,fecha:'2025-05-10'},
+    {tipo:'Egreso',cat:'Nómina',desc:'Nómina mayo - parcial',monto:1350000,fecha:'2025-05-05'},
+    {tipo:'Egreso',cat:'ERP',desc:'Suscripción sistema ERP',monto:500000,fecha:'2025-05-01'},
+    {tipo:'Ingreso',cat:'Evento',desc:'Quinceañero Valentina - saldo',monto:1900000,fecha:'2025-05-15'},
+    {tipo:'Egreso',cat:'Compras',desc:'Centros de mesa nuevos',monto:300000,fecha:'2025-05-12'},
+    {tipo:'Ingreso',cat:'Evento',desc:'Gala Tecnoandina - anticipo',monto:2000000,fecha:'2025-05-20'},
+    {tipo:'Egreso',cat:'Compras',desc:'Comida personal evento',monto:300000,fecha:'2025-05-18'},
+    {tipo:'Egreso',cat:'Fondo Arriendo',desc:'Aporte mensual fondo sede',monto:150000,fecha:'2025-05-25'},
+  ],
+  cxp:[
+    {prov:'Suscripción ERP',tipo:'Fija mensual',val:500000,venc:'2025-06-01',est:'Pendiente'},
+    {prov:'Arriendo bodega elementos',tipo:'Fija mensual',val:800000,venc:'2025-06-05',est:'Pendiente'},
+    {prov:'Flores del Valle SAS',tipo:'Variable',val:450000,venc:'2025-05-30',est:'Pagado'},
+  ],
+  timeline:[
+    {txt:'Factura FE-2025-003 emitida para Tecnoandina',color:'var(--green)',time:'Hoy 10:32'},
+    {txt:'Contrato HOR-2025-002 generado',color:'var(--gold)',time:'Hoy 09:15'},
+    {txt:'Recibo RP-2025-002 emitido — $2.000.000',color:'var(--blue)',time:'Hoy 09:10'},
+    {txt:'Evento EV-002 marcado como Realizado',color:'var(--purple)',time:'Ayer 18:45'},
+    {txt:'Nómina de mayo - pago parcial $1.350.000',color:'var(--red)',time:'Ayer 09:00'},
+  ],
+};
+
+// ═══════════════════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════════════════
+const fmt = n => { try{return '$ '+Math.round(+n||0).toLocaleString('es-CO');}catch{return '$ 0';} };
+const fmtN = n => Math.round(+n||0).toLocaleString('es-CO');
+const today = () => new Date().toISOString().split('T')[0];
+const padNum = (arr, pref) => `${pref}-${new Date().getFullYear()}-${String(arr.length+1).padStart(3,'0')}`;
+
+function toast(msg, type='ok') {
+  const t = document.getElementById('toast');
+  const txt = document.getElementById('toast-txt');
+  t.className = 'show ' + type;
+  txt.textContent = msg;
+  setTimeout(()=>t.className='',3200);
+}
+function openM(id) { populateClienteSelects(); document.getElementById(id)?.classList.add('open'); }
+function closeM(id) { document.getElementById(id)?.classList.remove('open'); }
+document.querySelectorAll('.moverlay').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');}));
+
+function tick() {
+  const n=new Date();
+  document.getElementById('clock').textContent = n.toLocaleDateString('es-CO',{day:'2-digit',month:'short'})+'  '+n.toLocaleTimeString('es-CO',{hour:'2-digit',minute:'2-digit'});
+}
+setInterval(tick,1000); tick();
+
+// ═══════════════════════════════════════════════════════
+//  NAVIGATION
+// ═══════════════════════════════════════════════════════
+const titlesMap = {
+  dashboard:'Dashboard',cotizaciones:'Cotizaciones',eventos:'Eventos',clientes:'Clientes',
+  facturas:'Facturas Electrónicas',recibos:'Recibos de Pago',contratos:'Contratos',
+  inventario:'Inventario',nomina:'Nómina y RRHH',liquidacion:'Liquidación de Nómina',
+  proveedores:'Proveedores',tesoreria:'Tesorería',cxc:'Cuentas × Cobrar',
+  cxp:'Cuentas × Pagar',reportes:'Reportes',ia:'Asistente IA'
+};
+const renderMap = {
+  dashboard:renderDashboard, cotizaciones:renderCotizaciones, eventos:renderEventos,
+  clientes:renderClientes, facturas:renderFacturas, recibos:renderRecibos,
+  contratos:renderContratos, inventario:renderInventario, nomina:renderNomina,
+  liquidacion:renderLiquidacionPage, proveedores:renderProveedores, tesoreria:renderTesoreria,
+  cxc:renderCXC, cxp:renderCXP, reportes:renderReportes, ia:renderIA,
+};
+
+function go(id) {
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('active'));
+  document.getElementById('pg-'+id)?.classList.add('active');
+  document.querySelector(`.ni[onclick="go('${id}')"]`)?.classList.add('active');
+  document.getElementById('pg-title').textContent = titlesMap[id]||id;
+  document.getElementById('pg-bread').textContent = `Hored ERP / ${titlesMap[id]||id}`;
+  if(renderMap[id]) renderMap[id]();
+}
+
+function populateClienteSelects() {
+  const opts = S.clientes.map(c=>`<option value="${c.nom}">${c.nom}</option>`).join('');
+  ['fac-cli','rec-cli','con-cli','cot-cli','ev-cli'].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.innerHTML = '<option value="">-- Seleccionar --</option>' + opts;
+  });
+  // Populate liquidacion select
+  const liqSel = document.getElementById('liq-emp-sel');
+  if(liqSel) {
+    liqSel.innerHTML = '<option value="">-- Seleccionar Colaborador --</option>' +
+      S.empleados.map((e,i)=>`<option value="${i}">${e.nom} — ${e.cargo}</option>`).join('');
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+//  DASHBOARD
+// ═══════════════════════════════════════════════════════
+function renderDashboard() {
+  const ing = S.movimientos.filter(m=>m.tipo==='Ingreso').reduce((a,m)=>a+m.monto,0);
+  const egr = S.movimientos.filter(m=>m.tipo==='Egreso').reduce((a,m)=>a+m.monto,0);
+  const cart = S.facturas.filter(f=>f.estado==='Pendiente').reduce((a,f)=>a+calcFactTotal(f),0);
+  const nom = S.empleados.reduce((a,e)=>a+e.sal,0);
+  document.getElementById('di-ing').textContent = fmt(ing);
+  document.getElementById('di-cart').textContent = fmt(cart);
+  document.getElementById('di-cart-n').textContent = S.facturas.filter(f=>f.estado==='Pendiente').length+' facturas abiertas';
+  document.getElementById('di-nom').textContent = fmt(nom);
+  document.getElementById('di-nom-n').textContent = S.empleados.length+' colaboradores';
+  document.getElementById('di-saldo').textContent = fmt(ing-egr);
+  document.getElementById('di-ev').textContent = S.eventos.filter(e=>e.estado==='Confirmado'||e.estado==='En proceso').length;
+  document.getElementById('di-cot').textContent = S.cotizaciones.filter(c=>c.estado==='En revisión'||c.estado==='Enviada').length;
+  document.getElementById('di-fac').textContent = S.facturas.filter(f=>f.estado==='Pendiente').length;
+  document.getElementById('di-col').textContent = S.empleados.length;
+  document.getElementById('tl-list').innerHTML = S.timeline.slice(0,6).map(t=>`
+    <div class="timeline-item">
+      <div class="tl-dot" style="background:${t.color}"></div>
+      <div class="tl-txt">${t.txt}</div>
+      <div class="tl-time">${t.time}</div>
+    </div>`).join('');
+  const alerts = [];
+  const pendNom = S.empleados.filter(e=>e.estado==='Pendiente').length;
+  const vencFact = S.facturas.filter(f=>{const v=new Date(f.vence);return f.estado==='Pendiente'&&v<new Date();}).length;
+  if(pendNom>0) alerts.push({icon:'👥',color:'var(--gold)',txt:`${pendNom} colaboradores con nómina pendiente`});
+  if(vencFact>0) alerts.push({icon:'🧾',color:'var(--red)',txt:`${vencFact} facturas vencidas sin cobrar`});
+  if(cart>5000000) alerts.push({icon:'💰',color:'var(--red)',txt:`Cartera alta: ${fmt(cart)}`});
+  if(ing-egr<2000000) alerts.push({icon:'⚠',color:'var(--red)',txt:'Saldo disponible bajo, revisar tesorería'});
+  if(alerts.length===0) alerts.push({icon:'✓',color:'var(--green)',txt:'Sistema al día — todo en orden'});
+  document.getElementById('alerts-list').innerHTML = alerts.map(a=>`
+    <div style="display:flex;gap:.6rem;align-items:center;padding:.55rem .7rem;background:var(--s3);border-radius:var(--r);border-left:3px solid ${a.color}">
+      <span style="font-size:.9rem">${a.icon}</span>
+      <span style="font-size:.76rem;color:var(--muted)">${a.txt}</span>
+    </div>`).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+//  COTIZACIONES
+// ═══════════════════════════════════════════════════════
+function renderCotizaciones() {
+  const tot = S.cotizaciones.length;
+  const apr = S.cotizaciones.filter(c=>c.estado==='Aprobada').length;
+  const rev = S.cotizaciones.filter(c=>c.estado==='En revisión').length;
+  const val = S.cotizaciones.reduce((a,c)=>a+c.valor,0);
+  document.getElementById('kcot-tot').textContent = tot;
+  document.getElementById('kcot-apr').textContent = apr;
+  document.getElementById('kcot-rev').textContent = rev;
+  document.getElementById('kcot-val').textContent = fmt(val);
+  const bCol = {'Aprobada':'b-green','En revisión':'b-gold','Enviada':'b-blue','Rechazada':'b-red'};
+  document.getElementById('tb-cotizaciones').innerHTML = S.cotizaciones.map((c,i)=>`
+    <tr>
+      <td><span class="text-mono text-green" style="font-size:.75rem">${c.id}</span></td>
+      <td><strong>${c.cli}</strong></td>
+      <td><span class="badge b-purple">${c.tipo}</span></td>
+      <td class="text-mono" style="font-size:.72rem">${c.fecha}</td>
+      <td>${c.pers}</td>
+      <td><strong>${fmt(c.valor)}</strong></td>
+      <td style="font-size:.72rem">${c.validez} días</td>
+      <td><span class="badge ${bCol[c.estado]||'b-grey'}">${c.estado}</span></td>
+      <td>
+        <div class="accion-row">
+          <select class="btn btn-ghost btn-xs" onchange="S.cotizaciones[${i}].estado=this.value;renderCotizaciones();toast('Estado actualizado');this.value=''" style="cursor:pointer">
+            <option value="">Cambiar…</option>
+            <option>Enviada</option><option>En revisión</option><option>Aprobada</option><option>Rechazada</option>
+          </select>
+          <button class="btn btn-red btn-xs" onclick="S.cotizaciones.splice(${i},1);renderCotizaciones();toast('Eliminado')">✕</button>
+        </div>
+      </td>
+    </tr>`).join('') || '<tr><td colspan="9" class="empty"><span class="empty-icon">📊</span>Sin cotizaciones</td></tr>';
+}
+
+function saveCotizacion() {
+  const cli = document.getElementById('cot-cli').value;
+  if(!cli) return toast('Selecciona un cliente','err');
+  const id = padNum(S.cotizaciones,'COT');
+  S.cotizaciones.push({
+    id, cli, tipo:document.getElementById('cot-tipo').value,
+    fecha:document.getElementById('cot-fecha').value||today(),
+    pers:+document.getElementById('cot-pers').value||0,
+    valor:+document.getElementById('cot-valor').value||0,
+    lugar:document.getElementById('cot-lugar').value,
+    obs:document.getElementById('cot-obs').value,
+    estado:'Enviada', validez:+document.getElementById('cot-valid').value||15,
+  });
+  S.timeline.unshift({txt:`Cotización ${id} creada para ${cli}`,color:'var(--gold)',time:'Ahora'});
+  closeM('m-cotizacion'); renderCotizaciones(); toast(`Cotización ${id} creada ✓`);
+}
+
+// ═══════════════════════════════════════════════════════
+//  EVENTOS
+// ═══════════════════════════════════════════════════════
+function renderEventos() {
+  const bCol = {'Confirmado':'b-green','Realizado':'b-blue','En proceso':'b-gold','Cotización':'b-grey','Cancelado':'b-red'};
+  document.getElementById('kev-tot').textContent = S.eventos.length;
+  document.getElementById('kev-conf').textContent = S.eventos.filter(e=>e.estado==='Confirmado').length;
+  document.getElementById('kev-proc').textContent = S.eventos.filter(e=>e.estado==='En proceso').length;
+  document.getElementById('kev-val').textContent = fmt(S.eventos.reduce((a,e)=>a+e.val,0));
+  document.getElementById('tb-eventos').innerHTML = S.eventos.map((e,i)=>`
+    <tr>
+      <td class="text-mono text-green" style="font-size:.72rem">${e.id}</td>
+      <td><strong>${e.nom}</strong></td>
+      <td style="font-size:.75rem">${e.cli}</td>
+      <td><span class="badge b-purple">${e.tipo}</span></td>
+      <td class="text-mono" style="font-size:.72rem">${e.fecha}</td>
+      <td style="font-size:.72rem">${e.hi}–${e.hf}</td>
+      <td>${e.pers}</td>
+      <td><strong>${fmt(e.val)}</strong></td>
+      <td style="font-size:.72rem">${e.lugar}</td>
+      <td><span class="badge ${bCol[e.estado]||'b-grey'}">${e.estado}</span></td>
+      <td>
+        <div class="accion-row">
+          <select class="btn btn-ghost btn-xs" onchange="S.eventos[${i}].estado=this.value;renderEventos();toast('Estado actualizado');this.value=''" style="cursor:pointer">
+            <option value="">Cambiar…</option>
+            <option>Cotización</option><option>Confirmado</option><option>En proceso</option><option>Realizado</option><option>Cancelado</option>
+          </select>
+          <button class="btn btn-red btn-xs" onclick="S.eventos.splice(${i},1);renderEventos();toast('Eliminado')">✕</button>
+        </div>
+      </td>
+    </tr>`).join('') || '<tr><td colspan="11" class="empty"><span class="empty-icon">🗓</span>Sin eventos</td></tr>';
+}
+
+function saveEvento() {
+  const nom = document.getElementById('ev-nom').value.trim();
+  const cli = document.getElementById('ev-cli').value;
+  if(!nom||!cli) return toast('Completa nombre y cliente','err');
+  const id = 'EV-'+String(S.eventos.length+1).padStart(3,'0');
+  S.eventos.push({
+    id, nom, cli, tipo:document.getElementById('ev-tipo').value,
+    fecha:document.getElementById('ev-fecha').value||today(),
+    hi:document.getElementById('ev-hi').value, hf:document.getElementById('ev-hf').value,
+    pers:+document.getElementById('ev-pers').value||0,
+    val:+document.getElementById('ev-val').value||0,
+    lugar:document.getElementById('ev-lugar').value, estado:'Confirmado',
+  });
+  S.timeline.unshift({txt:`Evento ${nom} creado`,color:'var(--purple)',time:'Ahora'});
+  closeM('m-evento'); renderEventos(); toast('Evento creado ✓');
+}
+
+// ═══════════════════════════════════════════════════════
+//  CLIENTES
+// ═══════════════════════════════════════════════════════
+function renderClientes() {
+  document.getElementById('tb-clientes').innerHTML = S.clientes.map((c,i)=>{
+    const evs = S.eventos.filter(e=>e.cli===c.nom).length;
+    const val = S.eventos.filter(e=>e.cli===c.nom).reduce((a,e)=>a+e.val,0);
+    return `<tr>
+      <td><strong>${c.nom}</strong></td>
+      <td class="text-mono" style="font-size:.72rem">${c.nit}</td>
+      <td>${c.ciudad||'—'}</td>
+      <td>${c.tel}</td>
+      <td style="font-size:.75rem">${c.email}</td>
+      <td>${evs}</td>
+      <td><strong style="color:var(--green)">${fmt(val)}</strong></td>
+      <td><button class="btn btn-red btn-xs" onclick="S.clientes.splice(${i},1);renderClientes();toast('Eliminado')">✕</button></td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="8" class="empty"><span class="empty-icon">👤</span>Sin clientes</td></tr>';
+}
+
+function saveCliente() {
+  const nom = document.getElementById('cl-nom').value.trim();
+  if(!nom) return toast('Ingresa el nombre','err');
+  S.clientes.push({
+    id:S.clientes.length+1, nom,
+    nit:document.getElementById('cl-nit').value,
+    tel:document.getElementById('cl-tel').value,
+    email:document.getElementById('cl-email').value,
+    dir:document.getElementById('cl-dir').value,
+    ciudad:document.getElementById('cl-ciudad').value,
+  });
+  closeM('m-cliente'); renderClientes(); toast('Cliente registrado ✓');
+}
+
+// ═══════════════════════════════════════════════════════
+//  FACTURAS
+// ═══════════════════════════════════════════════════════
+function calcFactTotal(f) {
+  const sub = f.items.reduce((a,it)=>a+(+it.qty||1)*(+it.vu||0),0);
+  const desc = sub*(+(f.desc)||0)/100;
+  const base = sub-desc;
+  const iva = base*(+(f.iva||19))/100;
+  return Math.round(base+iva-(+f.anticipo||0));
+}
+function calcFactSub(f) { return f.items.reduce((a,it)=>a+(+it.qty||1)*(+it.vu||0),0); }
+
+let facItems = [{desc:'',qty:1,vu:0}];
+
+function renderFacItems() {
+  document.getElementById('fac-items-list').innerHTML = facItems.map((it,i)=>`
+    <div class="fac-item-row">
+      <div class="field"><label>${i===0?'Descripción':''}</label><input value="${it.desc}" placeholder="Descripción del servicio" oninput="facItems[${i}].desc=this.value;updateFacResumen()"></div>
+      <div class="field"><label>${i===0?'Cant':''}  </label><input type="number" value="${it.qty}" min="1" oninput="facItems[${i}].qty=+this.value;updateFacResumen()"></div>
+      <div class="field"><label>${i===0?'Valor Unitario':''}</label><input type="number" value="${it.vu||''}" placeholder="0" oninput="facItems[${i}].vu=+this.value;updateFacResumen()"></div>
+      <div class="field"><label>${i===0?'Total':''}</label><div style="padding:.5rem .7rem;background:var(--s4);border-radius:var(--r);font-size:.78rem;color:var(--green)">${fmt(it.qty*it.vu)}</div></div>
+    </div>`).join('') +
+    (facItems.length>1?`<button class="btn btn-ghost btn-xs" onclick="facItems.pop();renderFacItems()">− Quitar último</button>`:'');
+}
+
+function addFacItem() { facItems.push({desc:'',qty:1,vu:0}); renderFacItems(); }
+
+function updateFacResumen() {
+  const sub = facItems.reduce((a,it)=>a+(+it.qty||1)*(+it.vu||0),0);
+  const descPct = +document.getElementById('fac-desc')?.value||0;
+  const ivaPct = +document.getElementById('fac-iva')?.value||19;
+  const anticipo = +document.getElementById('fac-anticipo')?.value||0;
+  const desc = sub*descPct/100;
+  const base = sub-desc;
+  const iva = base*ivaPct/100;
+  const total = base+iva;
+  const neto = total-anticipo;
+  document.getElementById('fac-resumen').innerHTML = `
+    <div class="sum-row"><span class="sum-label">Subtotal</span><span>${fmt(sub)}</span></div>
+    ${descPct>0?`<div class="sum-row"><span class="sum-label">Descuento (${descPct}%)</span><span style="color:var(--red)">- ${fmt(desc)}</span></div>`:''}
+    <div class="sum-row"><span class="sum-label">Base Gravable</span><span>${fmt(base)}</span></div>
+    <div class="sum-row"><span class="sum-label">IVA (${ivaPct}%)</span><span>${fmt(iva)}</span></div>
+    <div class="sum-row"><span class="sum-label">Total Factura</span><span style="color:var(--gold)">${fmt(total)}</span></div>
+    ${anticipo>0?`<div class="sum-row"><span class="sum-label">Anticipo recibido</span><span style="color:var(--blue)">- ${fmt(anticipo)}</span></div>`:''}
+    <div class="sum-row"><span>SALDO A PAGAR</span><span>${fmt(neto)}</span></div>`;
+}
+
+function renderFacItems_init() { document.getElementById('fac-fecha').value=today(); document.getElementById('fac-vence').value=''; renderFacItems(); updateFacResumen(); }
+
+function renderFacturas() {
+  const pag = S.facturas.filter(f=>f.estado==='Pagada').length;
+  const pend = S.facturas.filter(f=>f.estado==='Pendiente').length;
+  const total = S.facturas.reduce((a,f)=>a+calcFactSub(f),0);
+  document.getElementById('kf-total').textContent = S.facturas.length;
+  document.getElementById('kf-pag').textContent = pag;
+  document.getElementById('kf-pend').textContent = pend;
+  document.getElementById('kf-monto').textContent = fmt(total);
+  document.getElementById('tb-facturas').innerHTML = S.facturas.map((f,i)=>{
+    const sub = calcFactSub(f);
+    const desc = sub*(+f.desc||0)/100;
+    const base = sub-desc;
+    const iva = base*(+(f.iva||19))/100;
+    const totalF = base+iva;
+    const neto = totalF-(+f.anticipo||0);
+    return `<tr>
+      <td><span class="text-mono text-green" style="font-size:.75rem">${f.num}</span></td>
+      <td><strong>${f.cli}</strong></td>
+      <td class="text-mono" style="font-size:.72rem">${f.fecha}</td>
+      <td class="text-mono" style="font-size:.72rem">${f.vence}</td>
+      <td>${fmt(sub)}</td>
+      <td style="font-size:.75rem">${fmt(iva)}</td>
+      <td style="font-size:.75rem;color:var(--red)">${f.desc>0?'-'+f.desc+'%':'—'}</td>
+      <td style="font-size:.75rem;color:var(--blue)">${f.anticipo>0?fmt(f.anticipo):'—'}</td>
+      <td><strong style="color:var(--gold)">${fmt(neto)}</strong></td>
+      <td><span class="badge ${f.estado==='Pagada'?'b-green':'b-red'}">${f.estado}</span></td>
+      <td>
+        <div class="accion-row">
+          <button class="btn btn-gold btn-xs" onclick="S.facturas[${i}].estado=S.facturas[${i}].estado==='Pendiente'?'Pagada':'Pendiente';renderFacturas();renderCXC();toast('Estado cambiado')">${f.estado==='Pagada'?'↩':'✓ Pagar'}</button>
+          <button class="btn btn-red btn-xs" onclick="S.facturas.splice(${i},1);renderFacturas();toast('Eliminada')">✕</button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="11" class="empty"><span class="empty-icon">🧾</span>Sin facturas</td></tr>';
+}
+
+function saveFactura() {
+  const cli = document.getElementById('fac-cli').value;
+  if(!cli) return toast('Selecciona un cliente','err');
+  if(!facItems.some(it=>it.desc&&it.vu>0)) return toast('Agrega al menos un ítem con valor','err');
+  const numFac = `FE-${new Date().getFullYear()}-${String(S.facturas.length+1).padStart(3,'0')}`;
+  const nuevaFac = {
+    num:numFac, cli,
+    fecha:document.getElementById('fac-fecha').value||today(),
+    vence:document.getElementById('fac-vence').value||today(),
+    items:[...facItems.filter(it=>it.desc)],
+    desc:+(document.getElementById('fac-desc').value||0),
+    iva:+(document.getElementById('fac-iva').value||19),
+    anticipo:+(document.getElementById('fac-anticipo').value||0),
+    mpago:document.getElementById('fac-mpago').value,
+    notas:document.getElementById('fac-notas').value,
+    estado:'Pendiente',
+  };
+  S.facturas.push(nuevaFac);
+  S.timeline.unshift({txt:`Factura ${numFac} emitida para ${cli}`,color:'var(--green)',time:'Ahora'});
+  closeM('m-factura');
+  facItems=[{desc:'',qty:1,vu:0}]; renderFacItems();
+  renderFacturas(); renderCXC(); renderDashboard();
+  toast(`Factura ${numFac} generada ✓`);
+  genPDFFactura(S.facturas.length-1);
+}
+
+function previewFactura() {
+  const cli = document.getElementById('fac-cli').value||'(sin cliente)';
+  const sub = facItems.reduce((a,it)=>a+(+it.qty||1)*(+it.vu||0),0);
+  const descPct = +document.getElementById('fac-desc')?.value||0;
+  const ivaPct = +document.getElementById('fac-iva')?.value||19;
+  const anticipo = +document.getElementById('fac-anticipo')?.value||0;
+  const base = sub-sub*descPct/100;
+  const iva = base*ivaPct/100;
+  const total = base+iva;
+  toast(`Vista previa: ${cli} — Total: ${fmt(total-anticipo)}`);
+}
+
+// ═══════════════════════════════════════════════════════
+//  RECIBOS
+// ═══════════════════════════════════════════════════════
+function renderRecibos() {
+  document.getElementById('tb-recibos').innerHTML = S.recibos.map((r,i)=>`
+    <tr>
+      <td class="text-mono text-green" style="font-size:.75rem">${r.num}</td>
+      <td><strong>${r.cli}</strong></td>
+      <td style="font-size:.75rem">${r.conc}</td>
+      <td><strong>${fmt(r.monto)}</strong></td>
+      <td><span class="badge b-blue">${r.mpago}</span></td>
+      <td class="text-mono" style="font-size:.7rem">${r.ref||'—'}</td>
+      <td class="text-mono" style="font-size:.72rem">${r.fecha}</td>
+      <td style="font-size:.75rem">${r.recibe}</td>
+      <td>
+        <div class="accion-row">
+          <button class="btn btn-gold btn-xs" onclick="genPDFRecibo(${i})">📥 PDF</button>
+          <button class="btn btn-red btn-xs" onclick="S.recibos.splice(${i},1);renderRecibos();toast('Eliminado')">✕</button>
+        </div>
+      </td>
+    </tr>`).join('') || '<tr><td colspan="9" class="empty"><span class="empty-icon">📄</span>Sin recibos</td></tr>';
+}
+
+function saveRecibo() {
+  const cli = document.getElementById('rec-cli').value;
+  if(!cli) return toast('Selecciona un cliente','err');
+  const monto = +document.getElementById('rec-monto').value||0;
+  if(!monto) return toast('Ingresa un monto válido','err');
+  const numRec = `RP-${new Date().getFullYear()}-${String(S.recibos.length+1).padStart(3,'0')}`;
+  const r = { num:numRec, cli, conc:document.getElementById('rec-conc').value, monto,
+    mpago:document.getElementById('rec-mpago').value, ref:document.getElementById('rec-ref').value,
+    obs:document.getElementById('rec-obs').value, fecha:document.getElementById('rec-fecha').value||today(), recibe:'Roberto Hored' };
+  S.recibos.push(r);
+  S.movimientos.push({tipo:'Ingreso',cat:'Evento',desc:r.conc,monto,fecha:r.fecha});
+  S.timeline.unshift({txt:`Recibo ${numRec} emitido — ${fmt(monto)}`,color:'var(--blue)',time:'Ahora'});
+  closeM('m-recibo'); renderRecibos(); renderTesoreria();
+  genPDFRecibo(S.recibos.length-1);
+  toast(`Recibo ${numRec} generado ✓`);
+}
+
+// ═══════════════════════════════════════════════════════
+//  CONTRATOS
+// ═══════════════════════════════════════════════════════
+function renderContratos() {
+  const firmados = S.contratos.filter(c=>c.estado==='Firmado').length;
+  const pend = S.contratos.filter(c=>c.estado==='Pendiente firma').length;
+  const valTot = S.contratos.reduce((a,c)=>a+c.val,0);
+  document.getElementById('kcon-tot').textContent = S.contratos.length;
+  document.getElementById('kcon-firm').textContent = firmados;
+  document.getElementById('kcon-pend').textContent = pend;
+  document.getElementById('kcon-val').textContent = fmt(valTot);
+  document.getElementById('tb-contratos').innerHTML = S.contratos.map((c,i)=>{
+    const saldo = c.val-c.ant;
+    return `<tr>
+      <td class="text-mono text-green" style="font-size:.75rem">${c.num}</td>
+      <td><strong>${c.cli}</strong></td>
+      <td style="font-size:.75rem">${c.ev}</td>
+      <td class="text-mono" style="font-size:.72rem">${c.fev}</td>
+      <td><strong>${fmt(c.val)}</strong></td>
+      <td>${fmt(c.ant)}</td>
+      <td style="color:var(--red)">${fmt(saldo)}</td>
+      <td><span class="badge ${c.estado==='Firmado'?'b-green':c.estado==='Completado'?'b-blue':'b-gold'}">${c.estado}</span></td>
+      <td>
+        <div class="accion-row">
+          <button class="btn btn-gold btn-xs" onclick="genPDFContrato(${i})">📥 PDF</button>
+          <button class="btn btn-green btn-xs" onclick="S.contratos[${i}].estado='Firmado';renderContratos();toast('Contrato firmado')">✓ Firmar</button>
+          <button class="btn btn-red btn-xs" onclick="S.contratos.splice(${i},1);renderContratos();toast('Eliminado')">✕</button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="9" class="empty"><span class="empty-icon">📋</span>Sin contratos</td></tr>';
+}
+
+function saveContrato() {
+  const cli = document.getElementById('con-cli').value;
+  if(!cli) return toast('Selecciona un cliente','err');
+  const numCon = `HOR-${new Date().getFullYear()}-${String(S.contratos.length+1).padStart(3,'0')}`;
+  const servTxt = document.getElementById('con-serv').value;
+  const c = {
+    num:numCon, cli, ev:document.getElementById('con-ev').value,
+    tipo:document.getElementById('con-tipo').value, fev:document.getElementById('con-fev').value||today(),
+    hi:document.getElementById('con-hi').value, hf:document.getElementById('con-hf').value,
+    lugar:document.getElementById('con-lugar').value,
+    pers:+document.getElementById('con-pers').value||0, val:+document.getElementById('con-val').value||0,
+    ant:+document.getElementById('con-ant').value||0, fant:document.getElementById('con-fant').value||today(),
+    serv:servTxt.split('\n').filter(s=>s.trim()), estado:'Pendiente firma',
+  };
+  S.contratos.push(c);
+  S.timeline.unshift({txt:`Contrato ${numCon} generado`,color:'var(--gold)',time:'Ahora'});
+  closeM('m-contrato'); renderContratos();
+  genPDFContrato(S.contratos.length-1);
+  toast(`Contrato ${numCon} generado ✓`);
+}
+
+// ═══════════════════════════════════════════════════════
+//  PDF ENGINE — Estilo Hored (oscuro / dorado)
+// ═══════════════════════════════════════════════════════
+
+// Paleta
+const PDF_DARK   = '#1A1208';
+const PDF_GOLD   = '#C9A84C';
+const PDF_CREAM  = '#F5EFE0';
+const PDF_LIGHT  = '#F0EBE0';
+const PDF_MID    = '#6B5B3E';
+const PDF_BORDER = '#DDD5C0';
+const PDF_WHITE  = '#FDFAF4';
+
+const fmtCOP = n => '$ ' + Math.round(+n||0).toLocaleString('es-CO');
+
+function fmtFecha(s) {
+  if(!s) return '—';
+  const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const [y,m,d] = s.split('-');
+  return `${+d} de ${meses[+m-1]} de ${y}`;
+}
+
+function pdfHoredHeader(doc, tipo, num) {
+  const W = doc.internal.pageSize.getWidth();
+  // Fondo oscuro header
+  doc.setFillColor(PDF_DARK);
+  doc.rect(0, 0, W, 28, 'F');
+  // Barra dorada inferior del header
+  doc.setFillColor(PDF_GOLD);
+  doc.rect(0, 26, W, 2, 'F');
+  // Acento izquierdo dorado
+  doc.setFillColor(PDF_GOLD);
+  doc.rect(0, 0, 4, 28, 'F');
+  // Logo HORED
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(18);
+  doc.setTextColor(PDF_GOLD);
+  doc.text('HORED', 12, 13);
+  // Subtítulo empresa
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(7);
+  doc.setTextColor('#9B8B6E');
+  doc.text('EMPRESA DE EVENTOS & CELEBRACIONES', 12, 20);
+  // Tipo doc + número (derecha)
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(9);
+  doc.setTextColor(PDF_GOLD);
+  doc.text(tipo, W - 14, 11, {align:'right'});
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(8);
+  doc.setTextColor('#9B8B6E');
+  doc.text(num, W - 14, 18, {align:'right'});
+}
+
+function pdfHoredFooter(doc, texto) {
+  const W = doc.internal.pageSize.getWidth();
+  const H = doc.internal.pageSize.getHeight();
+  doc.setFillColor(PDF_GOLD);
+  doc.rect(0, H - 14, W, 1.5, 'F');
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(6.5);
+  doc.setTextColor(PDF_MID);
+  doc.text('Hored Empresa de Eventos  |  NIT 900.123.456-7  |  eventos@hored.co', 14, H - 8);
+  doc.text(texto, W - 14, H - 8, {align:'right'});
+}
+
+function pdfSecTitle(doc, y, txt) {
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(8);
+  doc.setTextColor(PDF_DARK);
+  doc.text(txt, 14, y);
+  doc.setDrawColor(PDF_GOLD);
+  doc.setLineWidth(0.5);
+  doc.line(14, y+1.5, doc.internal.pageSize.getWidth()-14, y+1.5);
+  return y + 6;
+}
+
+// ── FACTURA ──────────────────────────────────────────────
+function genPDFFactura(i) {
+  const f = S.facturas[i]; if(!f) return;
+  const sub   = calcFactSub(f);
+  const desc  = sub*(+f.desc||0)/100;
+  const base  = sub - desc;
+  const iva   = base*(+(f.iva||19))/100;
+  const total = base + iva;
+  const neto  = total - (+f.anticipo||0);
+  const cli   = S.clientes.find(c=>c.nom===f.cli)||{};
+
+  const {jsPDF} = window.jspdf;
+  const doc = new jsPDF({unit:'mm', format:'a4'});
+  const W = doc.internal.pageSize.getWidth();
+  let y = 0;
+
+  // Header
+  pdfHoredHeader(doc, 'FACTURA ELECTRÓNICA', f.num);
+  y = 34;
+
+  // Línea título
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(14);
+  doc.setTextColor(PDF_GOLD);
+  doc.text('FACTURA ELECTRÓNICA DE VENTA', 14, y);
+  doc.setFont('helvetica','normal');
+  doc.setFontSize(8);
+  doc.setTextColor(PDF_MID);
+  doc.text(`Fecha: ${fmtFecha(f.fecha)}   ·   Vence: ${fmtFecha(f.vence)}   ·   Método: ${f.mpago}`, 14, y+6);
+  // Línea dorada separadora
+  doc.setDrawColor(PDF_GOLD); doc.setLineWidth(0.6);
+  doc.line(14, y+9, W-14, y+9);
+  y += 15;
+
+  // Bloques empresa / cliente
+  const colMid = W/2;
+  // Empresa (izq)
+  doc.setFillColor(PDF_LIGHT);
+  doc.rect(14, y, colMid-18, 30, 'F');
+  doc.setDrawColor(PDF_BORDER); doc.setLineWidth(0.3);
+  doc.rect(14, y, colMid-18, 30);
+  doc.setFillColor(PDF_GOLD);
+  doc.rect(14, y, 3, 30, 'F');
+
+  doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+  doc.text('HORED EMPRESA DE EVENTOS', 20, y+7);
+  doc.setFont('helvetica','normal'); doc.setFontSize(7.5); doc.setTextColor(PDF_MID);
+  doc.text('NIT: 900.123.456-7', 20, y+13);
+  doc.text('Tel: +57 300 000 0000', 20, y+18);
+  doc.text('eventos@hored.co', 20, y+23);
+  doc.text('Régimen: Simplificado', 20, y+28);
+
+  // Cliente (der)
+  const cx = colMid - 2;
+  doc.setFillColor(PDF_WHITE);
+  doc.rect(cx, y, W-cx-14, 30, 'F');
+  doc.setDrawColor(PDF_BORDER); doc.setLineWidth(0.3);
+  doc.rect(cx, y, W-cx-14, 30);
+  doc.setFillColor(PDF_GOLD);
+  doc.rect(cx, y, 3, 30, 'F');
+
+  doc.setFont('helvetica','bold'); doc.setFontSize(7.5); doc.setTextColor(PDF_DARK);
+  doc.text('FACTURAR A:', cx+6, y+7);
+  doc.setFontSize(8.5);
+  doc.text(f.cli, cx+6, y+13);
+  doc.setFont('helvetica','normal'); doc.setFontSize(7.5); doc.setTextColor(PDF_MID);
+  doc.text(`NIT/CC: ${cli.nit||'—'}`, cx+6, y+19);
+  doc.text(cli.ciudad||'—', cx+6, y+24);
+  doc.text(cli.email||'—', cx+6, y+29);
+  y += 36;
+
+  // Tabla ítems — cabecera
+  doc.setFillColor(PDF_DARK);
+  doc.rect(14, y, W-28, 9, 'F');
+  doc.setDrawColor(PDF_GOLD); doc.setLineWidth(0.8);
+  doc.line(14, y+9, W-14, y+9);
+  doc.setFont('helvetica','bold'); doc.setFontSize(7.5); doc.setTextColor(PDF_WHITE);
+  doc.text('DESCRIPCIÓN DEL SERVICIO', 18, y+6);
+  doc.text('CANT.', W-85, y+6, {align:'right'});
+  doc.text('VALOR UNIT.', W-55, y+6, {align:'right'});
+  doc.text('SUBTOTAL', W-17, y+6, {align:'right'});
+  y += 9;
+
+  // Filas ítems
+  f.items.forEach((it,idx) => {
+    const rowH = 8;
+    doc.setFillColor(idx%2===0 ? PDF_WHITE : PDF_LIGHT);
+    doc.rect(14, y, W-28, rowH, 'F');
+    doc.setDrawColor(PDF_BORDER); doc.setLineWidth(0.2);
+    doc.line(14, y+rowH, W-14, y+rowH);
+    doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+    doc.text(it.desc||'—', 18, y+5.5);
+    doc.text(String(it.qty||1), W-85, y+5.5, {align:'right'});
+    doc.text(fmtCOP(it.vu||0), W-55, y+5.5, {align:'right'});
+    doc.setFont('helvetica','bold');
+    doc.text(fmtCOP((it.qty||1)*(it.vu||0)), W-17, y+5.5, {align:'right'});
+    y += rowH;
+  });
+  y += 4;
+
+  // Totales (alineados derecha)
+  const tx = W - 80;
+  const totRows = [
+    ['Subtotal:', fmtCOP(sub), false],
+  ];
+  if(f.desc>0) totRows.push([`Descuento (${f.desc}%):`, '- '+fmtCOP(desc), false]);
+  totRows.push(['Base gravable:', fmtCOP(base), false]);
+  totRows.push([`IVA (${f.iva||19}%):`, fmtCOP(iva), false]);
+  totRows.push(['TOTAL FACTURA:', fmtCOP(total), true]);
+  if(f.anticipo>0) {
+    totRows.push(['Anticipo recibido:', '- '+fmtCOP(f.anticipo), false]);
+    totRows.push(['SALDO A PAGAR:', fmtCOP(neto), true]);
+  }
+
+  totRows.forEach(([lab, val, big]) => {
+    if(big) {
+      doc.setFillColor(PDF_DARK);
+      doc.rect(tx-4, y-1, W-tx-10, 9, 'F');
+      doc.setDrawColor(PDF_GOLD); doc.setLineWidth(0.8);
+      doc.line(tx-4, y-1, W-14, y-1);
+      doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(PDF_GOLD);
+      doc.text(lab, tx+2, y+5.5);
+      doc.text(val, W-17, y+5.5, {align:'right'});
+      y += 11;
+    } else {
+      doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(PDF_MID);
+      doc.text(lab, tx+2, y+5);
+      doc.setFont('helvetica','bold'); doc.setTextColor(PDF_DARK);
+      doc.text(val, W-17, y+5, {align:'right'});
+      y += 7;
+    }
+  });
+  y += 6;
+
+  // Bloque pago + notas
+  y = pdfSecTitle(doc, y, 'INFORMACIÓN DE PAGO');
+  doc.setFillColor(PDF_LIGHT);
+  doc.rect(14, y, (W-28)/2-2, 28, 'F');
+  doc.setFillColor(PDF_WHITE);
+  doc.rect(14+(W-28)/2, y, (W-28)/2-2, 28, 'F');
+  doc.setDrawColor(PDF_BORDER); doc.setLineWidth(0.3);
+  doc.rect(14, y, W-28, 28);
+
+  doc.setFont('helvetica','normal'); doc.setFontSize(7.5); doc.setTextColor(PDF_MID);
+  doc.text(`Método: ${f.mpago}`, 18, y+7);
+  doc.text('Banco: Bancolombia · Cta Ahorros', 18, y+13);
+  doc.text('N° Cuenta: 123-456789-00', 18, y+19);
+  doc.text('Titular: Hored SAS · NIT 900.123.456-7', 18, y+25);
+
+  const nx = 14+(W-28)/2+4;
+  doc.setFont('helvetica','bold'); doc.setFontSize(7.5); doc.setTextColor(PDF_DARK);
+  doc.text('NOTAS:', nx, y+7);
+  doc.setFont('helvetica','normal'); doc.setTextColor(PDF_MID);
+  const notasTxt = f.notas||'Gracias por confiar en Hored Eventos. Este documento constituye comprobante oficial de la transacción.';
+  const lines = doc.splitTextToSize(notasTxt, (W-28)/2-8);
+  lines.slice(0,3).forEach((l,li)=>doc.text(l, nx, y+13+li*5));
+  y += 34;
+
+  // DIAN
+  doc.setFillColor('#E8F5D0');
+  doc.setDrawColor(PDF_GOLD); doc.setLineWidth(0.4);
+  doc.rect(14, y, W-28, 10, 'FD');
+  doc.setFont('helvetica','bold'); doc.setFontSize(7); doc.setTextColor('#1A5C2A');
+  doc.text(`✓  Factura Electrónica  ·  CUFE: HORED-${f.num.replace(/\D/g,'')}-${Date.now()}  ·  Autorizado DIAN  ·  Res. 18764030066879`, 18, y+6.5);
+  y += 15;
+
+  // Firma
+  const fw = (W-28)/2-5;
+  doc.setFillColor(PDF_LIGHT);
+  doc.rect(14, y, fw, 22, 'F');
+  doc.setFillColor(PDF_WHITE);
+  doc.rect(14+fw+8, y, fw, 22, 'F');
+  [14, 14+fw+8].forEach(rx=>{
+    doc.setDrawColor(PDF_BORDER); doc.setLineWidth(0.3); doc.rect(rx, y, fw, 22);
+    doc.setFillColor(PDF_GOLD); doc.rect(rx, y, 3, 22, 'F');
+  });
+  doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+  doc.text('HORED EMPRESA DE EVENTOS', 20, y+7);
+  doc.setFont('helvetica','normal'); doc.setFontSize(7); doc.setTextColor(PDF_MID);
+  doc.text('_________________________', 20, y+14);
+  doc.text('Roberto Hored · Representante Legal', 20, y+19);
+
+  doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+  doc.text(f.cli, 22+fw+8, y+7);
+  doc.setFont('helvetica','normal'); doc.setFontSize(7); doc.setTextColor(PDF_MID);
+  doc.text('_________________________', 22+fw+8, y+14);
+  doc.text(`CC/NIT: ${cli.nit||'—'}  ·  El Cliente`, 22+fw+8, y+19);
+
+  pdfHoredFooter(doc, `Factura ${f.num} · Documento electrónico válido`);
+  doc.save(`Hored-Factura-${f.num}.pdf`);
+  toast(`📥 Hored-Factura-${f.num}.pdf descargado ✓`);
+}
+
+// ── RECIBO ───────────────────────────────────────────────
+function genPDFRecibo(i) {
+  const r = S.recibos[i]; if(!r) return;
+  const {jsPDF} = window.jspdf;
+  const doc = new jsPDF({unit:'mm', format:'a4'});
+  const W = doc.internal.pageSize.getWidth();
+  let y = 0;
+
+  pdfHoredHeader(doc, 'RECIBO DE PAGO', r.num);
+  y = 34;
+
+  doc.setFont('helvetica','bold'); doc.setFontSize(16); doc.setTextColor(PDF_GOLD);
+  doc.text('RECIBO DE PAGO', 14, y);
+  doc.setDrawColor(PDF_GOLD); doc.setLineWidth(0.6);
+  doc.line(14, y+4, W-14, y+4);
+  y += 12;
+
+  // Info block
+  const rows = [
+    ['Cliente:', r.cli],
+    ['Concepto:', r.conc],
+    ['Método de Pago:', r.mpago],
+    ['Referencia:', r.ref||'N/A'],
+    ['Fecha:', fmtFecha(r.fecha)],
+    ['Recibió:', r.recibe],
+  ];
+  if(r.obs) rows.push(['Observaciones:', r.obs]);
+
+  rows.forEach(([lab, val], idx) => {
+    doc.setFillColor(idx%2===0 ? PDF_WHITE : PDF_LIGHT);
+    doc.rect(14, y, W-28, 9, 'F');
+    doc.setDrawColor(PDF_BORDER); doc.setLineWidth(0.2);
+    doc.line(14, y+9, W-14, y+9);
+    doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(PDF_MID);
+    doc.text(lab, 18, y+6);
+    doc.setFont('helvetica','normal'); doc.setTextColor(PDF_DARK);
+    doc.text(val, 70, y+6);
+    y += 9;
+  });
+  y += 10;
+
+  // Monto box
+  doc.setFillColor(PDF_DARK);
+  doc.rect(14, y, W-28, 28, 'F');
+  doc.setDrawColor(PDF_GOLD); doc.setLineWidth(1.5);
+  doc.rect(14, y, W-28, 28);
+  doc.setFillColor(PDF_GOLD);
+  doc.rect(14, y, W-28, 3, 'F');
+
+  doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor('#9B8B6E');
+  doc.text('MONTO RECIBIDO', W/2, y+11, {align:'center'});
+  doc.setFont('helvetica','bold'); doc.setFontSize(22); doc.setTextColor(PDF_GOLD);
+  doc.text(fmtCOP(r.monto), W/2, y+23, {align:'center'});
+  y += 36;
+
+  // Firmas
+  const fw = (W-28)/2-5;
+  [14, 14+fw+8].forEach((rx, idx) => {
+    doc.setFillColor(PDF_LIGHT);
+    doc.rect(rx, y, fw, 24, 'F');
+    doc.setDrawColor(PDF_BORDER); doc.setLineWidth(0.3); doc.rect(rx, y, fw, 24);
+    doc.setFillColor(PDF_GOLD); doc.rect(rx, y, 3, 24, 'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+    doc.text(idx===0?'RECIBIÓ':'ENTREGÓ', rx+6, y+8);
+    doc.setFont('helvetica','normal'); doc.setFontSize(7); doc.setTextColor(PDF_MID);
+    doc.text('_________________________', rx+6, y+16);
+    doc.text(idx===0?r.recibe:r.cli, rx+6, y+21);
+  });
+
+  pdfHoredFooter(doc, `Recibo ${r.num} · Documento de soporte`);
+  doc.save(`Hored-Recibo-${r.num}.pdf`);
+  toast(`📥 Hored-Recibo-${r.num}.pdf descargado ✓`);
+}
+
+// ── CONTRATO ─────────────────────────────────────────────
+function genPDFContrato(i) {
+  const c = S.contratos[i]; if(!c) return;
+  const cli = S.clientes.find(cl=>cl.nom===c.cli)||{};
+  const saldo = c.val - c.ant;
+
+  const {jsPDF} = window.jspdf;
+  const doc = new jsPDF({unit:'mm', format:'a4'});
+  const W = doc.internal.pageSize.getWidth();
+  let y = 0;
+
+  pdfHoredHeader(doc, 'CONTRATO DE SERVICIOS', c.num);
+  y = 34;
+
+  // Título centrado
+  doc.setFont('helvetica','bold'); doc.setFontSize(14); doc.setTextColor(PDF_DARK);
+  doc.text('CONTRATO DE PRESTACIÓN DE SERVICIOS', W/2, y, {align:'center'});
+  doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(PDF_MID);
+  doc.text(`${c.num}  ·  ${fmtFecha(c.fev)}`, W/2, y+7, {align:'center'});
+  doc.setDrawColor(PDF_GOLD); doc.setLineWidth(1);
+  doc.line(14, y+11, W-14, y+11);
+  y += 18;
+
+  // Bloque partes
+  y = pdfSecTitle(doc, y, '1. PARTES DEL CONTRATO');
+  doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+  const partesText = `Entre HORED EMPRESA DE EVENTOS, NIT 900.123.456-7, representada por Roberto Hored, denominada "EL PRESTADOR"; y ${c.cli}, CC/NIT ${cli.nit||'—'}, denominado(a) "EL CLIENTE"; se celebra el presente contrato.`;
+  const partesLines = doc.splitTextToSize(partesText, W-28);
+  doc.text(partesLines, 14, y);
+  y += partesLines.length * 5 + 5;
+
+  // Objeto
+  y = pdfSecTitle(doc, y, '2. OBJETO DEL CONTRATO');
+  const objetoText = `EL PRESTADOR se compromete a organizar y ejecutar un evento de tipo ${c.tipo} denominado "${c.ev}", para ${c.pers} personas, a realizarse el ${fmtFecha(c.fev)} en ${c.lugar}, en el horario de ${c.hi} a ${c.hf}.`;
+  const objetoLines = doc.splitTextToSize(objetoText, W-28);
+  doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+  doc.text(objetoLines, 14, y);
+  y += objetoLines.length * 5 + 5;
+
+  // Servicios
+  y = pdfSecTitle(doc, y, '3. SERVICIOS INCLUIDOS');
+  c.serv.forEach((s, idx) => {
+    doc.setFillColor(idx%2===0 ? PDF_WHITE : PDF_LIGHT);
+    doc.rect(14, y-1, W-28, 7.5, 'F');
+    doc.setFillColor(PDF_GOLD); doc.rect(14, y-1, 3, 7.5, 'F');
+    doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+    doc.text(`◆  ${s}`, 20, y+4.5);
+    y += 7.5;
+  });
+  y += 5;
+
+  // Valor
+  y = pdfSecTitle(doc, y, '4. VALOR Y FORMA DE PAGO');
+  const valRows = [
+    ['Valor total del contrato', fmtCOP(c.val), false],
+    [`Anticipo (antes del ${c.fant})`, fmtCOP(c.ant), false],
+    ['Saldo a cancelar el día del evento', fmtCOP(saldo), true],
+  ];
+  valRows.forEach(([lab, val, big]) => {
+    if(big) {
+      doc.setFillColor(PDF_DARK);
+      doc.rect(14, y, W-28, 9, 'F');
+      doc.setDrawColor(PDF_GOLD); doc.setLineWidth(0.8);
+      doc.line(14, y, W-14, y);
+      doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(PDF_GOLD);
+      doc.text(lab, 18, y+6);
+      doc.text(val, W-17, y+6, {align:'right'});
+      y += 11;
+    } else {
+      doc.setFillColor(PDF_LIGHT);
+      doc.rect(14, y, W-28, 8, 'F');
+      doc.setDrawColor(PDF_BORDER); doc.setLineWidth(0.2);
+      doc.line(14, y+8, W-14, y+8);
+      doc.setFont('helvetica','normal'); doc.setFontSize(8.5); doc.setTextColor(PDF_DARK);
+      doc.text(lab, 18, y+5.5);
+      doc.setFont('helvetica','bold'); doc.setTextColor(PDF_GOLD);
+      doc.text(val, W-17, y+5.5, {align:'right'});
+      y += 8;
+    }
+  });
+  y += 6;
+
+  // Cláusulas
+  const clausulas = [
+    ['5. CANCELACIÓN Y DEVOLUCIONES', 'En caso de cancelación con más de 30 días de anticipación, se retendrá el 20% del anticipo como gastos administrativos. Con menos de 30 días, se retendrá la totalidad del anticipo. En caso de fuerza mayor documentada, se acordará reprogramación sin penalidad.'],
+    ['6. RESPONSABILIDADES DEL CLIENTE', 'EL CLIENTE garantiza información veraz sobre el evento, número de invitados y requerimientos. Cualquier cambio sustancial deberá notificarse con mínimo 15 días de antelación y podría generar ajuste en el valor del contrato.'],
+    ['7. RESPONSABILIDADES DEL PRESTADOR', 'HORED garantiza la calidad de los servicios contratados. En caso de incumplimiento imputable al prestador, se reembolsará el total del anticipo más un 10% adicional como compensación.'],
+    ['8. CONFIDENCIALIDAD', 'Ambas partes se comprometen a mantener la confidencialidad sobre la información intercambiada en el marco de este contrato.'],
+  ];
+
+  clausulas.forEach(([titulo, texto]) => {
+    if(y > 230) { doc.addPage(); pdfHoredHeader(doc, 'CONTRATO DE SERVICIOS', c.num); y = 34; }
+    y = pdfSecTitle(doc, y, titulo);
+    const lines = doc.splitTextToSize(texto, W-28);
+    doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+    doc.text(lines, 14, y);
+    y += lines.length * 5 + 5;
+  });
+
+  // Aceptación
+  if(y > 220) { doc.addPage(); pdfHoredHeader(doc, 'CONTRATO DE SERVICIOS', c.num); y = 34; }
+  y = pdfSecTitle(doc, y, '9. ACEPTACIÓN');
+  const acepText = 'Las partes declaran haber leído, entendido y aceptado en su totalidad los términos del presente contrato, el cual se firma en la ciudad indicada, en la fecha de expedición.';
+  const acepLines = doc.splitTextToSize(acepText, W-28);
+  doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+  doc.text(acepLines, 14, y);
+  y += acepLines.length * 5 + 14;
+
+  // Firmas
+  const fw2 = (W-28)/2-5;
+  [14, 14+fw2+8].forEach((rx, idx) => {
+    doc.setFillColor(PDF_LIGHT);
+    doc.rect(rx, y, fw2, 28, 'F');
+    doc.setDrawColor(PDF_BORDER); doc.setLineWidth(0.3); doc.rect(rx, y, fw2, 28);
+    doc.setFillColor(PDF_GOLD); doc.rect(rx, y, 3, 28, 'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(PDF_DARK);
+    doc.text(idx===0?'EL PRESTADOR':'EL CLIENTE', rx+7, y+8);
+    doc.setFont('helvetica','normal'); doc.setFontSize(7); doc.setTextColor(PDF_MID);
+    doc.text('_________________________', rx+7, y+18);
+    if(idx===0) {
+      doc.text('Roberto Hored · Representante Legal', rx+7, y+23);
+      doc.text('Hored Empresa de Eventos · NIT 900.123.456-7', rx+7, y+27);
+    } else {
+      doc.text(c.cli, rx+7, y+23);
+      doc.text(`CC/NIT: ${cli.nit||'—'}`, rx+7, y+27);
+    }
+  });
+
+  pdfHoredFooter(doc, `Contrato ${c.num} · Documento con validez legal`);
+  doc.save(`Hored-Contrato-${c.num}.pdf`);
+  toast(`📥 Hored-Contrato-${c.num}.pdf descargado ✓`);
+}
+
+// ═══════════════════════════════════════════════════════
+//  INVENTARIO
+// ═══════════════════════════════════════════════════════
+function renderInventario() {
+  const cat = document.getElementById('inv-cat')?.value||'';
+  const est = document.getElementById('inv-est')?.value||'';
+  const list = S.inventario.filter(it=>(!cat||it.cat===cat)&&(!est||it.est===est));
+  const tots = {disp:0,alq:0,mant:0};
+  S.inventario.forEach(it=>{if(it.est==='Disponible')tots.disp++;else if(it.est==='Alquilado')tots.alq++;else tots.mant++;});
+  document.getElementById('ki-tot').textContent = S.inventario.length;
+  document.getElementById('ki-disp').textContent = tots.disp;
+  document.getElementById('ki-alq').textContent = tots.alq;
+  document.getElementById('ki-mant').textContent = tots.mant;
+  document.getElementById('tb-inv').innerHTML = list.map(it=>{
+    const i = S.inventario.indexOf(it);
+    return `<tr>
+      <td><strong>${it.nom}</strong></td>
+      <td><span class="badge b-grey">${it.cat}</span></td>
+      <td>${it.qty}</td>
+      <td style="color:var(--green)">${it.disp}</td>
+      <td style="color:var(--gold)">${it.alq}</td>
+      <td><span class="badge ${it.est==='Disponible'?'b-green':it.est==='Alquilado'?'b-gold':'b-red'}">${it.est}</span></td>
+      <td>${fmt(it.valAlq)}</td>
+      <td style="color:var(--muted)">${fmt(it.valComp)}</td>
+      <td>
+        <div class="accion-row">
+          <button class="btn btn-ghost btn-xs" onclick="cycleInv(${i})">↻ Estado</button>
+          <button class="btn btn-red btn-xs" onclick="S.inventario.splice(${i},1);renderInventario();toast('Eliminado')">✕</button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="9" class="empty"><span class="empty-icon">📦</span>Sin ítems</td></tr>';
+}
+
+const ESTADOS_INV = ['Disponible','Alquilado','Mantenimiento'];
+function cycleInv(i) {
+  const cur = ESTADOS_INV.indexOf(S.inventario[i].est);
+  S.inventario[i].est = ESTADOS_INV[(cur+1)%3];
+  if(S.inventario[i].est==='Alquilado') S.inventario[i].alq++;
+  else if(S.inventario[i].est==='Disponible') S.inventario[i].alq=Math.max(0,S.inventario[i].alq-1);
+  renderInventario(); toast('Estado actualizado');
+}
+
+function addItem() {
+  const nom = document.getElementById('it-nom').value.trim();
+  if(!nom) return toast('Ingresa el nombre','err');
+  const qty = +document.getElementById('it-qty').value||1;
+  S.inventario.push({nom, cat:document.getElementById('it-cat').value, qty, disp:qty, alq:0,
+    est:document.getElementById('it-est').value, valAlq:+document.getElementById('it-alq').value||0,
+    valComp:+document.getElementById('it-comp').value||0});
+  closeM('m-item'); renderInventario(); toast('Ítem agregado ✓');
+}
+
+// ═══════════════════════════════════════════════════════
+//  NÓMINA
+// ═══════════════════════════════════════════════════════
+function calcCostoEmpresa(e) {
+  // Aportes empleador Colombia 2025
+  const sal = e.sal;
+  const salBase = Math.max(sal, SMLV);
+  const salud = sal * 0.085;    // 8.5% empleador
+  const pension = sal * 0.12;   // 12% empleador
+  const arl = sal * 0.00522;    // Riesgo I por defecto
+  const ccf = sal * 0.04;       // Caja compensación 4%
+  const icbf = sal * 0.03;      // ICBF 3%
+  const sena = sal * 0.02;      // SENA 2%
+  const cesantias = sal / 12;
+  const intCesantias = cesantias * 0.12;
+  const prima = sal / 12;
+  const vacaciones = sal / 24;
+  return sal + salud + pension + arl + ccf + icbf + sena + cesantias + intCesantias + prima + vacaciones;
+}
+
+function renderNomina() {
+  const totSal = S.empleados.reduce((a,e)=>a+e.sal,0);
+  const pagado = S.empleados.filter(e=>e.estado==='Pagado').reduce((a,e)=>a+e.sal,0);
+  const pend = totSal-pagado;
+  const costoEmp = S.empleados.reduce((a,e)=>a+calcCostoEmpresa(e),0);
+  document.getElementById('kn-tot').textContent = fmt(totSal);
+  document.getElementById('kn-pag').textContent = fmt(pagado);
+  document.getElementById('kn-pend').textContent = fmt(pend);
+  document.getElementById('kn-num').textContent = S.empleados.length;
+  document.getElementById('kn-costoEmp').textContent = fmt(costoEmp);
+  document.getElementById('tb-nomina').innerHTML = S.empleados.map((e,i)=>`
+    <tr>
+      <td><strong>${e.nom}</strong></td>
+      <td style="color:var(--muted);font-size:.75rem">${e.cargo}</td>
+      <td><strong>${fmt(e.sal)}</strong></td>
+      <td><span class="badge b-blue">${e.tipo}</span></td>
+      <td class="text-mono" style="font-size:.68rem">${e.fing||'—'}</td>
+      <td style="font-size:.72rem">${e.eps||'—'}</td>
+      <td style="font-size:.72rem">${e.arl||'—'}</td>
+      <td style="font-size:.72rem">${e.pension||'—'}</td>
+      <td><span class="badge ${e.estado==='Pagado'?'b-green':'b-gold'}">${e.estado}</span></td>
+      <td>
+        <div class="accion-row">
+          <button class="btn btn-blue btn-xs" onclick="abrirLiquidacion(${i})">💼 Liquidar</button>
+          <button class="btn btn-ghost btn-xs" onclick="toggleNomina(${i})">${e.estado==='Pagado'?'↩ Revertir':'✓ Pagar'}</button>
+          <button class="btn btn-red btn-xs" onclick="S.empleados.splice(${i},1);renderNomina();toast('Eliminado')">✕</button>
+        </div>
+      </td>
+    </tr>`).join('');
+}
+
+function abrirLiquidacion(i) {
+  go('liquidacion');
+  setTimeout(()=>{
+    const sel = document.getElementById('liq-emp-sel');
+    if(sel) { populateClienteSelects(); sel.value=i; calcLiquidacion(); }
+  }, 100);
+}
+
+function toggleNomina(i) {
+  S.empleados[i].estado = S.empleados[i].estado==='Pagado'?'Pendiente':'Pagado';
+  renderNomina(); toast('Estado de nómina actualizado');
+}
+
+function cerrarNomina() {
+  S.empleados.forEach(e=>e.estado='Pagado');
+  const tot = S.empleados.reduce((a,e)=>a+e.sal,0);
+  S.movimientos.push({tipo:'Egreso',cat:'Nómina',desc:'Cierre nómina mensual',monto:tot,fecha:today()});
+  S.timeline.unshift({txt:`Nómina cerrada — ${fmt(tot)}`,color:'var(--green)',time:'Ahora'});
+  renderNomina(); renderTesoreria(); toast(`Nómina cerrada ✓ — ${fmt(tot)}`);
+}
+
+function addEmpleado() {
+  const nom = document.getElementById('em-nom').value.trim();
+  if(!nom) return toast('Ingresa el nombre','err');
+  S.empleados.push({
+    nom, cargo:document.getElementById('em-cargo').value,
+    sal:+document.getElementById('em-sal').value||SMLV,
+    tipo:document.getElementById('em-tipo').value,
+    eps:document.getElementById('em-eps').value,
+    arl:document.getElementById('em-arl').value,
+    pension:document.getElementById('em-pension').value,
+    fing:document.getElementById('em-fing').value||today(),
+    cc:document.getElementById('em-cc').value,
+    cuenta:document.getElementById('em-cuenta').value,
+    estado:'Pendiente',
+  });
+  closeM('m-empleado'); renderNomina(); renderLiquidacionPage(); toast('Colaborador agregado ✓');
+}
+
+// ═══════════════════════════════════════════════════════
+//  LIQUIDACIÓN DE NÓMINA — COLOMBIA 2025
+// ═══════════════════════════════════════════════════════
+function renderLiquidacionPage() {
+  populateClienteSelects();
+  const idx = document.getElementById('liq-emp-sel')?.value;
+  if(idx!==''&&idx!==undefined&&idx!==null&&S.empleados[+idx]) calcLiquidacion();
+}
+
+function calcLiquidacion() {
+  const idx = document.getElementById('liq-emp-sel')?.value;
+  const tipo = document.getElementById('liq-tipo-sel')?.value||'mensual';
+  const container = document.getElementById('liq-content');
+  if(!idx && idx!=='0') {
+    container.innerHTML = '<div class="info-box">Selecciona un colaborador para calcular la liquidación.</div>'; return;
+  }
+  const e = S.empleados[+idx];
+  if(!e) return;
+
+  const sal = e.sal;
+  const auxTransp = sal <= 2*SMLV ? AUXILIO_TRANSPORTE : 0; // Aplica si salario ≤ 2 SMLV
+  const salBruto = sal + auxTransp;
+
+  // ── DEDUCCIONES EMPLEADO ──
+  const deducSalud = sal * 0.04;     // 4% empleado
+  const deducPension = sal * 0.04;   // 4% empleado
+  const fondoSolidaridad = sal > 4*SMLV ? sal*0.01 : 0; // 1% si > 4 SMLV
+  const totalDeduc = deducSalud + deducPension + fondoSolidaridad;
+  const salNeto = salBruto - totalDeduc;
+
+  // ── APORTES EMPLEADOR ──
+  const aporteSalud = sal * 0.085;     // 8.5%
+  const aportePension = sal * 0.12;    // 12%
+  const aporteARL = sal * 0.00522;     // 0.522% Riesgo I
+  const aporteCCF = sal * 0.04;        // 4% Caja Compensación
+  const aporteICBF = sal * 0.03;       // 3% ICBF
+  const aporteSENA = sal * 0.02;       // 2% SENA
+  const totalAportesEmp = aporteSalud+aportePension+aporteARL+aporteCCF+aporteICBF+aporteSENA;
+
+  // ── PRESTACIONES ──
+  const cesantias = (sal + auxTransp) / 12;
+  const intCesantias = cesantias * 0.12;    // 12% sobre cesantías
+  const prima = (sal + auxTransp) / 12;     // Prima semestral (1/12 mensual)
+  const vacaciones = sal / 24;              // 15 días por año (1/24 mensual)
+  const totalPrest = cesantias + intCesantias + prima + vacaciones;
+
+  const costoTotalEmp = sal + auxTransp + totalAportesEmp + totalPrest;
+
+  // ── DÍAS TRABAJADOS (si definitiva, calcular proporcional) ──
+  let diasTrabajados = 30;
+  let titulo = 'Liquidación Mensual';
+  if(tipo==='definitiva') { titulo='Liquidación Definitiva'; diasTrabajados=30; }
+  if(tipo==='prima') { titulo='Prima de Servicios'; }
+  if(tipo==='vacaciones') { titulo='Liquidación Vacaciones'; }
+  if(tipo==='cesantias') { titulo='Cesantías'; }
+
+  const html = `
+    <div class="liq-header">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div class="liq-emp">${e.nom}</div>
+          <div class="liq-cargo">${e.cargo} · Contrato ${e.tipo}</div>
+        </div>
+        <div style="text-align:right">
+          <span class="badge b-green">${titulo}</span>
+          <div class="text-mono text-muted" style="font-size:.62rem;margin-top:.3rem">${today()}</div>
+        </div>
+      </div>
+      <div class="liq-grid">
+        <div class="liq-item"><span class="lk">Cédula</span><br><span class="lv">${e.cc||'N/A'}</span></div>
+        <div class="liq-item"><span class="lk">Salario Base</span><br><span class="lv">${fmt(sal)}</span></div>
+        <div class="liq-item"><span class="lk">Fecha Ingreso</span><br><span class="lv">${e.fing||'N/A'}</span></div>
+        <div class="liq-item"><span class="lk">EPS / ARL</span><br><span class="lv">${e.eps||'—'} / ${e.arl||'—'}</span></div>
+        <div class="liq-item"><span class="lk">Fondo Pensión</span><br><span class="lv">${e.pension||'—'}</span></div>
+        <div class="liq-item"><span class="lk">Auxilio Transporte</span><br><span class="lv">${auxTransp>0?fmt(auxTransp):'No aplica (>2 SMLV)'}</span></div>
+      </div>
+    </div>
+
+    ${tipo==='mensual'||tipo==='definitiva'?`
+    <div class="g2">
+      <div>
+        <div class="liq-section">
+          <div class="liq-sec-head"><span>Devengos (+)</span><span style="color:var(--green)">${fmt(salBruto)}</span></div>
+          <div class="liq-line positive"><span>Salario básico</span><span class="liq-amt">${fmt(sal)}</span></div>
+          ${auxTransp>0?`<div class="liq-line positive"><span>Auxilio de transporte</span><span class="liq-amt">${fmt(auxTransp)}</span></div>`:''}
+        </div>
+
+        <div class="liq-section">
+          <div class="liq-sec-head"><span>Deducciones Empleado (−)</span><span style="color:var(--red)">${fmt(totalDeduc)}</span></div>
+          <div class="liq-line negative"><span>Salud (4%)</span><span class="liq-amt">− ${fmt(deducSalud)}</span></div>
+          <div class="liq-line negative"><span>Pensión (4%)</span><span class="liq-amt">− ${fmt(deducPension)}</span></div>
+          ${fondoSolidaridad>0?`<div class="liq-line negative"><span>Fondo Solidaridad (1%)</span><span class="liq-amt">− ${fmt(fondoSolidaridad)}</span></div>`:''}
+        </div>
+
+        <div class="liq-total" style="margin-bottom:1rem">
+          <span class="liq-total-label">💰 NETO A PAGAR EMPLEADO</span>
+          <span class="liq-total-val">${fmt(salNeto)}</span>
+        </div>
+
+        <div class="info-box" style="font-size:.72rem">
+          <strong>Cuenta de pago:</strong> ${e.cuenta||'Sin información bancaria'}
+        </div>
+      </div>
+
+      <div>
+        <div class="liq-section">
+          <div class="liq-sec-head"><span>Aportes Empleador (Costo empresa)</span><span style="color:var(--red)">${fmt(totalAportesEmp)}</span></div>
+          <div class="liq-line negative"><span>Salud empleador (8.5%)</span><span class="liq-amt">${fmt(aporteSalud)}</span></div>
+          <div class="liq-line negative"><span>Pensión empleador (12%)</span><span class="liq-amt">${fmt(aportePension)}</span></div>
+          <div class="liq-line negative"><span>ARL (0.522% Riesgo I)</span><span class="liq-amt">${fmt(aporteARL)}</span></div>
+          <div class="liq-line negative"><span>Caja Compensación (4%)</span><span class="liq-amt">${fmt(aporteCCF)}</span></div>
+          <div class="liq-line negative"><span>ICBF (3%)</span><span class="liq-amt">${fmt(aporteICBF)}</span></div>
+          <div class="liq-line negative"><span>SENA (2%)</span><span class="liq-amt">${fmt(aporteSENA)}</span></div>
+        </div>
+
+        <div class="liq-section">
+          <div class="liq-sec-head"><span>Provisiones Prestaciones</span><span style="color:var(--gold)">${fmt(totalPrest)}</span></div>
+          <div class="liq-line"><span>Cesantías (8.33%)</span><span class="liq-amt" style="color:var(--gold)">${fmt(cesantias)}</span></div>
+          <div class="liq-line"><span>Intereses Cesantías (12%)</span><span class="liq-amt" style="color:var(--gold)">${fmt(intCesantias)}</span></div>
+          <div class="liq-line"><span>Prima de Servicios (8.33%)</span><span class="liq-amt" style="color:var(--gold)">${fmt(prima)}</span></div>
+          <div class="liq-line"><span>Vacaciones (4.17%)</span><span class="liq-amt" style="color:var(--gold)">${fmt(vacaciones)}</span></div>
+        </div>
+
+        <div class="liq-total" style="background:rgba(224,112,112,.08);border-color:rgba(224,112,112,.25)">
+          <span class="liq-total-label">🏢 COSTO TOTAL EMPRESA/MES</span>
+          <span class="liq-total-val" style="color:var(--red)">${fmt(costoTotalEmp)}</span>
+        </div>
+      </div>
+    </div>`:''}
+
+    ${tipo==='prima'?`
+    <div class="card">
+      <div class="sh-title" style="margin-bottom:1rem">Prima de Servicios</div>
+      <div class="liq-section">
+        <div class="liq-sec-head"><span>Cálculo Prima Semestral</span></div>
+        <div class="liq-line"><span>Salario base</span><span>${fmt(sal)}</span></div>
+        <div class="liq-line"><span>Auxilio transporte</span><span>${fmt(auxTransp)}</span></div>
+        <div class="liq-line"><span>Días a liquidar (180)</span><span>180 días</span></div>
+      </div>
+      <div class="liq-total"><span class="liq-total-label">Prima a Pagar (180 días)</span><span class="liq-total-val">${fmt((sal+auxTransp)/2)}</span></div>
+      <div class="info-box" style="margin-top:.8rem">La prima se paga en dos cuotas: junio y diciembre. Se calcula como el salario completo dividido entre 2 por semestre.</div>
+    </div>`:''}
+
+    ${tipo==='vacaciones'?`
+    <div class="card">
+      <div class="sh-title" style="margin-bottom:1rem">Liquidación Vacaciones</div>
+      <div class="liq-section">
+        <div class="liq-sec-head"><span>Cálculo Vacaciones Legales</span></div>
+        <div class="liq-line"><span>Salario base (sin auxilio transp.)</span><span>${fmt(sal)}</span></div>
+        <div class="liq-line"><span>Días de vacaciones por año</span><span>15 días hábiles</span></div>
+        <div class="liq-line"><span>Valor día</span><span>${fmt(sal/30)}</span></div>
+      </div>
+      <div class="liq-total"><span class="liq-total-label">Vacaciones Anuales</span><span class="liq-total-val">${fmt(sal/2)}</span></div>
+    </div>`:''}
+
+    ${tipo==='cesantias'?`
+    <div class="card">
+      <div class="sh-title" style="margin-bottom:1rem">Cesantías y sus Intereses</div>
+      <div class="liq-section">
+        <div class="liq-sec-head"><span>Cálculo</span></div>
+        <div class="liq-line"><span>Salario + Auxilio Transp.</span><span>${fmt(sal+auxTransp)}</span></div>
+        <div class="liq-line"><span>Cesantías anuales (1 mes de salario)</span><span class="liq-amt" style="color:var(--gold)">${fmt(sal+auxTransp)}</span></div>
+        <div class="liq-line"><span>Intereses cesantías anuales (12%)</span><span class="liq-amt" style="color:var(--gold)">${fmt((sal+auxTransp)*0.12)}</span></div>
+      </div>
+      <div class="liq-total"><span class="liq-total-label">Total Cesantías + Intereses</span><span class="liq-total-val">${fmt((sal+auxTransp)*1.12)}</span></div>
+      <div class="info-box" style="margin-top:.8rem">Las cesantías se consignan al fondo de cesantías antes del 14 de febrero. Los intereses se pagan directamente al empleado en enero.</div>
+    </div>`:''}
+
+    ${tipo==='definitiva'?`
+    <div class="card" style="margin-top:1rem">
+      <div class="sh-title" style="margin-bottom:1rem">💼 Resumen Liquidación Definitiva (Anual)</div>
+      <div class="info-box warn">Este cálculo muestra los valores anuales que se deben pagar al liquidar el contrato.</div>
+      <div class="liq-section">
+        <div class="liq-sec-head"><span>Conceptos a Pagar</span></div>
+        <div class="liq-line"><span>Salarios pendientes (1 mes)</span><span style="color:var(--green)">${fmt(salNeto)}</span></div>
+        <div class="liq-line"><span>Cesantías (1 mes de salario + auxTransp)</span><span style="color:var(--gold)">${fmt(sal+auxTransp)}</span></div>
+        <div class="liq-line"><span>Intereses cesantías (12%)</span><span style="color:var(--gold)">${fmt((sal+auxTransp)*0.12)}</span></div>
+        <div class="liq-line"><span>Prima de servicios proporcional</span><span style="color:var(--gold)">${fmt((sal+auxTransp)/2)}</span></div>
+        <div class="liq-line"><span>Vacaciones pendientes</span><span style="color:var(--gold)">${fmt(sal/2)}</span></div>
+      </div>
+      <div class="liq-total"><span class="liq-total-label">TOTAL LIQUIDACIÓN DEFINITIVA</span><span class="liq-total-val">${fmt(salNeto+(sal+auxTransp)+(sal+auxTransp)*0.12+(sal+auxTransp)/2+sal/2)}</span></div>
+    </div>`:''}
+
+    <div class="g3" style="margin-top:1rem">
+      <div class="card" style="text-align:center">
+        <span class="kpi-label">Salario Bruto Mensual</span>
+        <div class="kpi-val" style="font-size:1.3rem">${fmt(salBruto)}</div>
+      </div>
+      <div class="card" style="text-align:center">
+        <span class="kpi-label">Neto a Pagar</span>
+        <div class="kpi-val green" style="font-size:1.3rem">${fmt(salNeto)}</div>
+      </div>
+      <div class="card" style="text-align:center">
+        <span class="kpi-label">Costo Empresa/Mes</span>
+        <div class="kpi-val red" style="font-size:1.3rem">${fmt(costoTotalEmp)}</div>
+      </div>
+    </div>`;
+
+  container.innerHTML = html;
+}
+
+function generarColillaPago() {
+  const idx = document.getElementById('liq-emp-sel')?.value;
+  if(!idx && idx!=='0') return toast('Selecciona un colaborador primero','err');
+  const e = S.empleados[+idx]; if(!e) return;
+  const sal = e.sal;
+  const auxTransp = sal <= 2*SMLV ? AUXILIO_TRANSPORTE : 0;
+  const deducSalud = sal*0.04, deducPension = sal*0.04;
+  const salNeto = sal+auxTransp-deducSalud-deducPension;
+  const win = window.open('','_blank','width=500,height:800');
+  win.document.write(`<html><head><title>Colilla ${e.nom}</title>
+  <style>body{font-family:Arial,sans-serif;font-size:11px;margin:0;padding:20px;color:#1a1a1a;max-width:420px}
+  .header{background:#1a2e10;color:white;padding:12px;margin:-20px -20px 15px;text-align:center}
+  .logo{font-size:18px;font-weight:900}.row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #eee}
+  .section{margin:10px 0;background:#f5f5f5;padding:8px;border-radius:4px}
+  .section-title{font-weight:bold;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#555;margin-bottom:5px}
+  .total-box{background:#1a2e10;color:#8ab840;padding:10px;text-align:center;border-radius:4px;margin:12px 0}
+  .total-val{font-size:20px;font-weight:900;font-family:monospace}
+  </style></head><body>
+  <div class="header"><div class="logo">HORED</div><div style="font-size:9px;opacity:.8">COLILLA DE PAGO</div></div>
+  <div class="row"><span>Empleado</span><strong>${e.nom}</strong></div>
+  <div class="row"><span>Cargo</span><span>${e.cargo}</span></div>
+  <div class="row"><span>Cédula</span><span>${e.cc||'—'}</span></div>
+  <div class="row"><span>Período</span><span>${new Date().toLocaleDateString('es-CO',{month:'long',year:'numeric'})}</span></div>
+  <div class="section"><div class="section-title">Devengos</div>
+  <div class="row"><span>Salario Básico</span><span>$ ${sal.toLocaleString('es-CO')}</span></div>
+  ${auxTransp>0?`<div class="row"><span>Aux. Transporte</span><span>$ ${auxTransp.toLocaleString('es-CO')}</span></div>`:''}
+  <div class="row" style="font-weight:bold"><span>Total Devengado</span><span>$ ${(sal+auxTransp).toLocaleString('es-CO')}</span></div></div>
+  <div class="section"><div class="section-title">Deducciones</div>
+  <div class="row"><span>Salud (4%)</span><span>- $ ${Math.round(deducSalud).toLocaleString('es-CO')}</span></div>
+  <div class="row"><span>Pensión (4%)</span><span>- $ ${Math.round(deducPension).toLocaleString('es-CO')}</span></div>
+  <div class="row" style="font-weight:bold"><span>Total Deducciones</span><span>- $ ${Math.round(deducSalud+deducPension).toLocaleString('es-CO')}</span></div></div>
+  <div class="total-box"><div style="font-size:9px;letter-spacing:1px;opacity:.8">NETO A PAGAR</div>
+  <div class="total-val">$ ${Math.round(salNeto).toLocaleString('es-CO')}</div></div>
+  <div class="row"><span>Banco / Cuenta</span><span style="font-size:10px">${e.cuenta||'—'}</span></div>
+  <div class="row"><span>EPS</span><span>${e.eps||'—'}</span></div>
+  <div class="row"><span>ARL</span><span>${e.arl||'—'}</span></div>
+  <div class="row"><span>Pensión</span><span>${e.pension||'—'}</span></div>
+  <div style="margin-top:20px;padding-top:12px;border-top:2px dashed #ccc;display:flex;justify-content:space-between">
+  <div style="text-align:center"><br><br>_____________________<br><small>Empleado</small></div>
+  <div style="text-align:center"><br><br>_____________________<br><small>Roberto Hored — Hored Eventos</small></div>
+  </div>
+  <script>window.print();</scr`+`ipt>
+
+</body></html>`);
+  win.document.close(); toast('Colilla generada ✓');
+}
+
+// ═══════════════════════════════════════════════════════
+//  PROVEEDORES
+// ═══════════════════════════════════════════════════════
+function renderProveedores() {
+  const stars = n=>'★'.repeat(+n||0)+'☆'.repeat(5-(+n||0));
+  document.getElementById('tb-prov').innerHTML = S.proveedores.map((p,i)=>`
+    <tr>
+      <td><strong>${p.emp}</strong></td>
+      <td>${p.con}</td>
+      <td><span class="badge b-blue">${p.serv}</span></td>
+      <td>${p.tel}</td>
+      <td style="font-size:.75rem">${p.email}</td>
+      <td style="color:var(--gold);letter-spacing:.1em;font-size:.85rem">${stars(p.cal)}</td>
+      <td><button class="btn btn-red btn-xs" onclick="S.proveedores.splice(${i},1);renderProveedores();toast('Eliminado')">✕</button></td>
+    </tr>`).join('');
+}
+
+function addProv() {
+  const emp = document.getElementById('pv-emp').value.trim();
+  if(!emp) return toast('Ingresa la empresa','err');
+  S.proveedores.push({emp, con:document.getElementById('pv-con').value, serv:document.getElementById('pv-serv').value,
+    tel:document.getElementById('pv-tel').value, email:document.getElementById('pv-email').value,
+    cal:+document.getElementById('pv-cal').value||5});
+  closeM('m-prov'); renderProveedores(); toast('Proveedor guardado ✓');
+}
+
+// ═══════════════════════════════════════════════════════
+//  TESORERÍA
+// ═══════════════════════════════════════════════════════
+function renderTesoreria() {
+  const ing = S.movimientos.filter(m=>m.tipo==='Ingreso').reduce((a,m)=>a+m.monto,0);
+  const egr = S.movimientos.filter(m=>m.tipo==='Egreso').reduce((a,m)=>a+m.monto,0);
+  const saldo = ing-egr;
+  document.getElementById('kt-caja').textContent = fmt(Math.round(saldo*0.3));
+  document.getElementById('kt-banco').textContent = fmt(Math.round(saldo*0.7));
+  document.getElementById('tx-list').innerHTML = [...S.movimientos].reverse().slice(0,10).map(m=>`
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:.4rem .6rem;border:1px solid var(--border);border-radius:4px">
+      <div><div style="font-size:.78rem">${m.desc}</div>
+      <div style="font-size:.62rem;color:var(--muted);font-family:var(--f-mono)">${m.cat} · ${m.fecha}</div></div>
+      <span style="font-size:.82rem;font-weight:700;color:${m.tipo==='Ingreso'?'var(--green)':'var(--red)'};margin-left:.6rem;white-space:nowrap">
+        ${m.tipo==='Ingreso'?'+':'−'}${fmt(m.monto)}</span>
+    </div>`).join('');
+  const cats = {};
+  const totalEgr = S.movimientos.filter(m=>m.tipo==='Egreso').reduce((a,m)=>{cats[m.cat]=(cats[m.cat]||0)+m.monto;return a+m.monto;},0);
+  document.getElementById('egr-dist').innerHTML = Object.entries(cats).sort((a,b)=>b[1]-a[1]).map(([k,v])=>{
+    const pct = Math.round(v/totalEgr*100)||0;
+    return `<div><div style="display:flex;justify-content:space-between;font-size:.72rem;margin-bottom:.2rem">
+      <span>${k}</span><span style="color:var(--muted)">${fmt(v)} · ${pct}%</span></div>
+      <div class="prog"><div class="prog-f red" style="width:${pct}%"></div></div></div>`;
+  }).join('');
+}
+
+function addMovimiento() {
+  const desc = document.getElementById('mv-desc').value.trim();
+  const monto = +document.getElementById('mv-monto').value||0;
+  if(!desc||!monto) return toast('Completa los campos','err');
+  S.movimientos.push({tipo:document.getElementById('mv-tipo').value, cat:document.getElementById('mv-cat').value,
+    desc, monto, fecha:document.getElementById('mv-fecha').value||today()});
+  closeM('m-movimiento'); renderTesoreria(); renderDashboard(); toast('Movimiento registrado ✓');
+}
+
+// ═══════════════════════════════════════════════════════
+//  CXC
+// ═══════════════════════════════════════════════════════
+function renderCXC() {
+  const cart = S.facturas.filter(f=>f.estado==='Pendiente');
+  const tot = cart.reduce((a,f)=>a+calcFactTotal(f),0);
+  const hoy = new Date(); let venc=0, prox=0, mora=new Set();
+  cart.forEach(f=>{const v=new Date(f.vence);const diff=Math.ceil((v-hoy)/(86400000));
+    if(diff<0){venc+=calcFactTotal(f);mora.add(f.cli);}else if(diff<=7)prox+=calcFactTotal(f);});
+  document.getElementById('kcxc-tot').textContent = fmt(tot);
+  document.getElementById('kcxc-venc').textContent = fmt(venc);
+  document.getElementById('kcxc-prox').textContent = fmt(prox);
+  document.getElementById('kcxc-mora').textContent = mora.size;
+  document.getElementById('tb-cxc').innerHTML = cart.map(f=>{
+    const v=new Date(f.vence); const dias=Math.ceil((v-hoy)/86400000); const total=calcFactTotal(f);
+    return `<tr>
+      <td><strong>${f.cli}</strong></td>
+      <td class="text-mono text-green" style="font-size:.75rem">${f.num}</td>
+      <td class="text-mono" style="font-size:.72rem">${f.fecha}</td>
+      <td class="text-mono" style="font-size:.72rem">${f.vence}</td>
+      <td><strong>${fmt(total)}</strong></td>
+      <td><span style="color:${dias<0?'var(--red)':dias<=7?'var(--gold)':'var(--green)'};font-family:var(--f-mono);font-size:.78rem">${dias<0?Math.abs(dias)+' vencido':dias+' días'}</span></td>
+      <td><span class="badge ${dias<0?'b-red':dias<=7?'b-gold':'b-green'}">${dias<0?'Vencida':dias<=7?'Por vencer':'Al día'}</span></td>
+      <td><button class="btn btn-green btn-xs" onclick="cobrarFact('${f.num}')">✓ Cobrar</button></td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="8" class="empty"><span class="empty-icon">✓</span>Sin cartera pendiente</td></tr>';
+}
+
+function cobrarFact(num) {
+  const f = S.facturas.find(f=>f.num===num); if(!f) return;
+  f.estado='Pagada';
+  const tot = calcFactTotal(f);
+  S.movimientos.push({tipo:'Ingreso',cat:'Evento',desc:`Cobro factura ${f.num}`,monto:tot,fecha:today()});
+  S.timeline.unshift({txt:`Factura ${f.num} cobrada — ${fmt(tot)}`,color:'var(--green)',time:'Ahora'});
+  renderCXC(); renderFacturas(); renderTesoreria(); renderDashboard(); toast('Factura cobrada ✓');
+}
+
+// ═══════════════════════════════════════════════════════
+//  CXP
+// ═══════════════════════════════════════════════════════
+function renderCXP() {
+  document.getElementById('tb-cxp').innerHTML = S.cxp.map((c,i)=>`
+    <tr>
+      <td><strong>${c.prov}</strong></td>
+      <td><span class="badge b-blue">${c.tipo}</span></td>
+      <td><strong>${fmt(c.val)}</strong></td>
+      <td class="text-mono" style="font-size:.72rem">${c.venc}</td>
+      <td><span class="badge ${c.est==='Pagado'?'b-green':'b-red'}">${c.est}</span></td>
+      <td>
+        <div class="accion-row">
+          <button class="btn btn-green btn-xs" onclick="S.cxp[${i}].est='Pagado';S.movimientos.push({tipo:'Egreso',cat:'CxP',desc:'Pago a '+S.cxp[${i}].prov,monto:S.cxp[${i}].val,fecha:today()});renderCXP();renderTesoreria();toast('Pago registrado')">✓ Pagar</button>
+          <button class="btn btn-red btn-xs" onclick="S.cxp.splice(${i},1);renderCXP();toast('Eliminado')">✕</button>
+        </div>
+      </td>
+    </tr>`).join('') || '<tr><td colspan="6" class="empty"><span class="empty-icon">✓</span>Sin obligaciones</td></tr>';
+}
+
+function addCXP() {
+  const prov = document.getElementById('cxp-prov').value.trim();
+  if(!prov) return toast('Ingresa el concepto','err');
+  S.cxp.push({prov, tipo:document.getElementById('cxp-tipo').value,
+    val:+document.getElementById('cxp-val').value||0,
+    venc:document.getElementById('cxp-venc').value||today(), est:'Pendiente'});
+  closeM('m-cxp'); renderCXP(); toast('Obligación registrada ✓');
+}
+
+// ═══════════════════════════════════════════════════════
+//  REPORTES
+// ═══════════════════════════════════════════════════════
+let activeRepTab = 'p&g';
+function repTab(id) {
+  activeRepTab = id;
+  document.querySelectorAll('#rep-tabs .tab').forEach((t,i)=>t.classList.toggle('active',['p&g','balance','ventas','nomina-rep','inventario-rep'][i]===id));
+  renderReportes();
+}
+
+function renderReportes() {
+  const ing = S.movimientos.filter(m=>m.tipo==='Ingreso').reduce((a,m)=>a+m.monto,0);
+  const egr = S.movimientos.filter(m=>m.tipo==='Egreso').reduce((a,m)=>a+m.monto,0);
+  const saldo = ing-egr;
+  const cart = S.facturas.filter(f=>f.estado==='Pendiente').reduce((a,f)=>a+calcFactTotal(f),0);
+  const nom = S.empleados.reduce((a,e)=>a+e.sal,0);
+  const costoEmp = S.empleados.reduce((a,e)=>a+calcCostoEmpresa(e),0);
+  const valInv = S.inventario.reduce((a,i)=>a+i.qty*i.valComp,0);
+  let html = '';
+
+  if(activeRepTab==='p&g') {
+    html = `<div class="g3">
+      <div class="card"><div class="card-glow"></div><span class="kpi-label">Ingresos Totales</span><div class="kpi-val green">${fmt(ing)}</div></div>
+      <div class="card"><div class="card-glow red"></div><span class="kpi-label">Egresos Totales</span><div class="kpi-val red">${fmt(egr)}</div></div>
+      <div class="card"><div class="card-glow ${saldo>=0?'':'red'}"></div><span class="kpi-label">Utilidad Operacional</span><div class="kpi-val ${saldo>=0?'green':'red'}">${fmt(saldo)}</div></div>
+    </div>
+    <div class="card">
+      <div class="sh-title" style="margin-bottom:1rem">Estado de Resultados</div>
+      <div class="liq-section">
+        <div class="liq-line positive"><span>+ Ingresos por eventos</span><span class="liq-amt">${fmt(ing)}</span></div>
+        <div class="liq-line negative"><span>− Nómina y prestaciones</span><span class="liq-amt">−${fmt(S.movimientos.filter(m=>m.cat==='Nómina').reduce((a,m)=>a+m.monto,0))}</span></div>
+        <div class="liq-line negative"><span>− Compras y suministros</span><span class="liq-amt">−${fmt(S.movimientos.filter(m=>m.cat==='Compras').reduce((a,m)=>a+m.monto,0))}</span></div>
+        <div class="liq-line negative"><span>− Gastos operativos</span><span class="liq-amt">−${fmt(S.movimientos.filter(m=>m.cat==='ERP'||m.cat==='Arriendo').reduce((a,m)=>a+m.monto,0))}</span></div>
+        <div class="liq-line negative"><span>− Cartera pendiente (facturado no cobrado)</span><span class="liq-amt">−${fmt(cart)}</span></div>
+      </div>
+      <div class="liq-total"><span class="liq-total-label">UTILIDAD NETA ESTIMADA</span><span class="liq-total-val" style="color:${saldo>=0?'var(--green)':'var(--red)'}">${fmt(saldo)}</span></div>
+    </div>`;
+  } else if(activeRepTab==='balance') {
+    html = `<div class="g2">
+      <div class="card">
+        <div class="sh-title" style="margin-bottom:1rem">ACTIVOS</div>
+        <div class="liq-line positive"><span>Caja y Banco</span><span>${fmt(saldo*0.3)} + ${fmt(saldo*0.7)}</span></div>
+        <div class="liq-line positive"><span>Cartera (CxC)</span><span>${fmt(cart)}</span></div>
+        <div class="liq-line positive"><span>Inventario (valor compra)</span><span>${fmt(valInv)}</span></div>
+        <div class="liq-line positive"><span>Fondo Arriendo</span><span>${fmt(1200000)}</span></div>
+        <div class="liq-line positive"><span>Fondo Emergencias</span><span>${fmt(500000)}</span></div>
+        <div style="padding:.7rem .8rem;font-weight:700;color:var(--green);border-top:1px solid var(--border2)">TOTAL ACTIVOS: ${fmt(saldo+cart+valInv+1700000)}</div>
+      </div>
+      <div class="card">
+        <div class="sh-title" style="margin-bottom:1rem">PASIVOS Y PATRIMONIO</div>
+        <div class="liq-line negative"><span>Nómina pendiente</span><span>${fmt(S.empleados.filter(e=>e.estado==='Pendiente').reduce((a,e)=>a+e.sal,0))}</span></div>
+        <div class="liq-line negative"><span>Cuentas por pagar</span><span>${fmt(S.cxp.filter(c=>c.est==='Pendiente').reduce((a,c)=>a+c.val,0))}</span></div>
+        <div class="liq-line positive"><span>Capital contable</span><span style="color:var(--green)">${fmt(Math.max(0,saldo))}</span></div>
+        <div style="padding:.7rem .8rem;font-weight:700;color:var(--green);border-top:1px solid var(--border2)">TOTAL: ${fmt(saldo+cart+valInv+1700000)}</div>
+      </div>
+    </div>`;
+  } else if(activeRepTab==='ventas') {
+    html = `<div class="g4" style="margin-bottom:1rem">
+      <div class="card"><span class="kpi-label">Eventos totales</span><div class="kpi-val">${S.eventos.length}</div></div>
+      <div class="card"><span class="kpi-label">Valor total eventos</span><div class="kpi-val green">${fmt(S.eventos.reduce((a,e)=>a+e.val,0))}</div></div>
+      <div class="card"><span class="kpi-label">Ticket promedio</span><div class="kpi-val gold">${fmt(S.eventos.reduce((a,e)=>a+e.val,0)/Math.max(1,S.eventos.length))}</div></div>
+      <div class="card"><span class="kpi-label">Facturas emitidas</span><div class="kpi-val">${S.facturas.length}</div></div>
+    </div>
+    <div class="card">
+      <div class="sh-title" style="margin-bottom:1rem">Eventos por Tipo</div>
+      ${[...new Set(S.eventos.map(e=>e.tipo))].map(tipo=>{
+        const evsTipo = S.eventos.filter(e=>e.tipo===tipo);
+        const pct = Math.round(evsTipo.length/S.eventos.length*100);
+        return `<div style="margin-bottom:.8rem"><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:.3rem">
+          <span>${tipo}</span><span>${evsTipo.length} eventos · ${fmt(evsTipo.reduce((a,e)=>a+e.val,0))}</span></div>
+          <div class="prog"><div class="prog-f green" style="width:${pct}%"></div></div></div>`;
+      }).join('')}
+    </div>`;
+  } else if(activeRepTab==='nomina-rep') {
+    html = `<div class="g3" style="margin-bottom:1rem">
+      <div class="card"><span class="kpi-label">Nómina Bruta/Mes</span><div class="kpi-val gold">${fmt(nom)}</div></div>
+      <div class="card"><span class="kpi-label">Costo Total Empresa/Mes</span><div class="kpi-val red">${fmt(costoEmp)}</div></div>
+      <div class="card"><span class="kpi-label">% Nómina sobre Ingresos</span><div class="kpi-val ${nom/ing>0.4?'red':'green'}">${Math.round(nom/Math.max(1,ing)*100)}%</div></div>
+    </div>
+    <div class="card">
+      <div class="sh-title" style="margin-bottom:1rem">Detalle Costo por Empleado</div>
+      <div class="tw"><table><thead><tr><th>Empleado</th><th>Cargo</th><th>Salario</th><th>Aportes Emp.</th><th>Provisiones</th><th>Costo Total</th></tr></thead>
+      <tbody>${S.empleados.map(e=>{
+        const ap = e.sal*(0.085+0.12+0.00522+0.04+0.03+0.02);
+        const at = e.sal<=2*SMLV?AUXILIO_TRANSPORTE:0;
+        const prest = (e.sal+at)*(1/12+0.01+1/12)+e.sal/24;
+        const costo = e.sal+at+ap+prest;
+        return `<tr><td>${e.nom}</td><td style="font-size:.72rem;color:var(--muted)">${e.cargo}</td>
+          <td>${fmt(e.sal)}</td><td style="color:var(--red)">${fmt(ap)}</td>
+          <td style="color:var(--gold)">${fmt(prest)}</td><td><strong style="color:var(--red)">${fmt(costo)}</strong></td></tr>`;
+      }).join('')}</tbody></table></div>
+    </div>`;
+  } else if(activeRepTab==='inventario-rep') {
+    const dispVal = S.inventario.reduce((a,i)=>i.est==='Disponible'?a+i.disp*i.valComp:a,0);
+    const alqVal = S.inventario.reduce((a,i)=>a+i.alq*i.valAlq,0);
+    html = `<div class="g3" style="margin-bottom:1rem">
+      <div class="card"><span class="kpi-label">Valor Inventario Total</span><div class="kpi-val gold">${fmt(valInv)}</div></div>
+      <div class="card"><span class="kpi-label">Val. Activos Disponibles</span><div class="kpi-val green">${fmt(dispVal)}</div></div>
+      <div class="card"><span class="kpi-label">Ingr. Alquiler Actual</span><div class="kpi-val blue">${fmt(alqVal)}</div></div>
+    </div>
+    <div class="tw"><table><thead><tr><th>Ítem</th><th>Cat.</th><th>Total</th><th>Disponible</th><th>Alquilado</th><th>Valor Inventario</th><th>% Utilización</th></tr></thead>
+    <tbody>${S.inventario.map(it=>{
+      const util = Math.round(it.alq/Math.max(1,it.qty)*100);
+      return `<tr><td>${it.nom}</td><td><span class="badge b-grey">${it.cat}</span></td>
+        <td>${it.qty}</td><td style="color:var(--green)">${it.disp}</td><td style="color:var(--gold)">${it.alq}</td>
+        <td>${fmt(it.qty*it.valComp)}</td>
+        <td><div class="prog" style="width:80px;display:inline-block"><div class="prog-f ${util>70?'gold':'green'}" style="width:${util}%"></div></div> ${util}%</td></tr>`;
+    }).join('')}</tbody></table></div>`;
+  }
+  document.getElementById('rep-content').innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════
+//  ASISTENTE IA
+// ═══════════════════════════════════════════════════════
+const preguntas = [
+  '¿Cómo está la salud financiera del negocio?',
+  '¿Qué empleados tienen nómina pendiente?',
+  '¿Cuánto debo pagar en prestaciones este semestre?',
+  '¿Cuál es mi margen de rentabilidad?',
+  '¿Qué facturas están vencidas?',
+  '¿Cuál es el costo real de cada empleado?',
+  '¿Cómo puedo mejorar mi flujo de caja?',
+];
+
+function renderIA() {
+  const chatArea = document.getElementById('chat-area');
+  if(chatArea.children.length===0) {
+    addChatMsg('ai', 'Hola 👋 Soy el asistente IA de Hored ERP. Tengo acceso a todos tus datos en tiempo real: nómina, facturas, inventario, contratos y finanzas. ¿En qué te puedo ayudar hoy?');
+  }
+  document.getElementById('quick-questions').innerHTML = preguntas.map(p=>`
+    <button class="btn btn-ghost btn-sm" style="text-align:left;width:100%;justify-content:flex-start;font-size:.72rem" onclick="sendPregunta('${p}')">${p}</button>`).join('');
+  renderDiagnostico();
+}
+
+function renderDiagnostico() {
+  const ing = S.movimientos.filter(m=>m.tipo==='Ingreso').reduce((a,m)=>a+m.monto,0);
+  const egr = S.movimientos.filter(m=>m.tipo==='Egreso').reduce((a,m)=>a+m.monto,0);
+  const nom = S.empleados.reduce((a,e)=>a+e.sal,0);
+  const cart = S.facturas.filter(f=>f.estado==='Pendiente').reduce((a,f)=>a+calcFactTotal(f),0);
+  const margen = Math.round((ing-egr)/Math.max(1,ing)*100);
+  const items = [
+    {label:'Margen Operacional', val:margen+'%', ok:margen>20, icon:margen>20?'✓':'⚠'},
+    {label:'Ratio Nómina/Ingr.', val:Math.round(nom/Math.max(1,ing)*100)+'%', ok:nom/ing<0.4, icon:nom/ing<0.4?'✓':'⚠'},
+    {label:'Cartera Pendiente', val:fmt(cart), ok:cart<5000000, icon:cart<5000000?'✓':'⚠'},
+    {label:'Nóm. Pendientes', val:S.empleados.filter(e=>e.estado==='Pendiente').length+' colab.', ok:S.empleados.filter(e=>e.estado==='Pendiente').length===0, icon:S.empleados.filter(e=>e.estado==='Pendiente').length===0?'✓':'⚠'},
+    {label:'Eventos Activos', val:S.eventos.filter(e=>e.estado!=='Realizado'&&e.estado!=='Cancelado').length, ok:true, icon:'ℹ'},
+  ];
+  document.getElementById('diagnostico').innerHTML = items.map(it=>`
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:.5rem .7rem;background:var(--s3);border-radius:var(--r);border-left:3px solid ${it.ok?'var(--green)':'var(--gold)'}">
+      <span style="font-size:.72rem;color:var(--muted)">${it.label}</span>
+      <div style="display:flex;align-items:center;gap:.4rem">
+        <span style="font-size:.78rem;font-weight:600">${it.val}</span>
+        <span style="font-size:.75rem;color:${it.ok?'var(--green)':'var(--gold)'}">${it.icon}</span>
+      </div>
+    </div>`).join('');
+}
+
+function addChatMsg(role, txt) {
+  const area = document.getElementById('chat-area');
+  const div = document.createElement('div');
+  div.className = 'chat-msg '+role;
+  if(role==='ai') div.innerHTML = `<span class="ai-badge">✦ ASISTENTE IA</span>${txt}`;
+  else div.textContent = txt;
+  area.appendChild(div);
+  area.scrollTop = area.scrollHeight;
+}
+
+function sendPregunta(p) {
+  document.getElementById('chat-in').value = p;
+  sendChat();
+}
+
+// ── MOTOR IA LOCAL — funciona sin internet, sin servidor ──
+function getDatosERP() {
+  const ing  = S.movimientos.filter(m=>m.tipo==='Ingreso').reduce((a,m)=>a+m.monto,0);
+  const egr  = S.movimientos.filter(m=>m.tipo==='Egreso').reduce((a,m)=>a+m.monto,0);
+  const nom  = S.empleados.reduce((a,e)=>a+e.sal,0);
+  const cart = S.facturas.filter(f=>f.estado==='Pendiente').reduce((a,f)=>a+calcFactTotal(f),0);
+  const costoEmp = S.empleados.reduce((a,e)=>a+calcCostoEmpresa(e),0);
+  const valInv = S.inventario.reduce((a,i)=>a+i.qty*i.valComp,0);
+  const hoy = new Date();
+  const facVenc = S.facturas.filter(f=>{const v=new Date(f.vence);return f.estado==='Pendiente'&&v<hoy;});
+  const empPend = S.empleados.filter(e=>e.estado==='Pendiente');
+  const margen = ing>0 ? Math.round((ing-egr)/ing*100) : 0;
+  return {ing,egr,saldo:ing-egr,nom,cart,costoEmp,valInv,facVenc,empPend,margen};
+}
+
+function respuestaIA(msg) {
+  const d = getDatosERP();
+  const m = msg.toLowerCase();
+
+  // ── CAJA / SALDO / DINERO ──
+  if(/caja|saldo|dinero|plata|efectivo|cuánto ten|disponible|banco/.test(m)) {
+    const caja = Math.round(d.saldo*0.3);
+    const banco= Math.round(d.saldo*0.7);
+    return `💰 Actualmente tienes <strong>${fmt(d.saldo)}</strong> disponible en total.<br>• Caja: <strong>${fmt(caja)}</strong><br>• Banco: <strong>${fmt(banco)}</strong><br>• Fondo arriendo: $1.200.000 · Fondo emergencias: $500.000`;
+  }
+
+  // ── SALUD FINANCIERA ──
+  if(/salud|financier|negocio|bien|mal|cómo est|situación|estado/.test(m)) {
+    const semaforo = d.margen>25?'🟢 Excelente':d.margen>10?'🟡 Estable':'🔴 Requiere atención';
+    return `${semaforo} — La salud financiera de Hored está <strong>${d.margen>25?'excelente':d.margen>10?'estable':'en riesgo'}</strong>.<br>• Ingresos: ${fmt(d.ing)} | Egresos: ${fmt(d.egr)}<br>• Margen operacional: <strong>${d.margen}%</strong> (saludable >20%)<br>• Cartera pendiente por cobrar: ${fmt(d.cart)}${d.facVenc.length>0?`<br>⚠️ Tienes <strong>${d.facVenc.length} factura(s) vencida(s)</strong> — cobra cuanto antes.`:''}`;
+  }
+
+  // ── NÓMINA ──
+  if(/nómin|nomina|salari|pagar emplead|colaborad|trabaj/.test(m)) {
+    const pend = d.empPend.map(e=>e.nom).join(', ');
+    return `👥 Nómina mensual bruta: <strong>${fmt(d.nom)}</strong><br>• Costo real empresa (con prestaciones y parafiscales): <strong>${fmt(d.costoEmp)}</strong><br>• Colaboradores pendientes de pago (${d.empPend.length}): ${pend||'ninguno — ¡todos al día! ✓'}<br>• Ve a <em>Nómina → Liquidación</em> para calcular el neto de cada colaborador.`;
+  }
+
+  // ── PRESTACIONES ──
+  if(/prestacion|cesantia|prima|vacacion|liquidar|liquidación|semestre/.test(m)) {
+    const totalPrest = S.empleados.reduce((a,e)=>{
+      const at=e.sal<=2*SMLV?AUXILIO_TRANSPORTE:0;
+      return a+(e.sal+at)/12+((e.sal+at)/12)*0.12+(e.sal+at)/12+e.sal/24;
+    },0);
+    const primaTotal = S.empleados.reduce((a,e)=>{const at=e.sal<=2*SMLV?AUXILIO_TRANSPORTE:0;return a+(e.sal+at)/2;},0);
+    return `📋 Provisiones de prestaciones sociales (mensuales): <strong>${fmt(totalPrest)}</strong><br>• Cesantías + intereses: ${fmt(S.empleados.reduce((a,e)=>{const at=e.sal<=2*SMLV?AUXILIO_TRANSPORTE:0;return a+(e.sal+at)/12*1.12;},0))}<br>• Prima semestral a pagar este período: <strong>${fmt(primaTotal)}</strong> (jun/dic)<br>• Vacaciones anuales provisionadas: ${fmt(S.empleados.reduce((a,e)=>a+e.sal/24,0))}/mes`;
+  }
+
+  // ── FACTURAS VENCIDAS / CARTERA ──
+  if(/factura|cartera|cobrar|vencid|pagar|deben|debe/.test(m)) {
+    if(d.facVenc.length===0 && /vencid/.test(m)) return `✅ ¡Buenas noticias! No tienes facturas vencidas en este momento. Tu cartera pendiente total es ${fmt(d.cart)} y está dentro del plazo.`;
+    const detalle = S.facturas.filter(f=>f.estado==='Pendiente').map(f=>`• ${f.cli} — ${f.num}: ${fmt(calcFactTotal(f))}`).join('<br>');
+    return `🧾 Cartera pendiente total: <strong>${fmt(d.cart)}</strong><br>${detalle}<br>${d.facVenc.length>0?`⚠️ <strong>${d.facVenc.length} factura(s) vencida(s)</strong> — cobra inmediatamente desde <em>Cuentas × Cobrar</em>.`:'✅ Ninguna vencida aún.'}`;
+  }
+
+  // ── MARGEN / RENTABILIDAD ──
+  if(/margen|rentab|ganancia|utilidad|profit/.test(m)) {
+    const recomend = d.margen<10?'⚠️ Margen bajo — revisa costos y sube precios.':d.margen<20?'🟡 Margen aceptable — hay espacio para mejorar.':'🟢 Margen saludable — el negocio es rentable.';
+    return `📈 Margen operacional actual: <strong>${d.margen}%</strong><br>• Ingresos totales: ${fmt(d.ing)}<br>• Egresos totales: ${fmt(d.egr)}<br>• Utilidad operacional: <strong>${fmt(d.ing-d.egr)}</strong><br>${recomend}`;
+  }
+
+  // ── INVENTARIO ──
+  if(/inventari|activo|ítem|item|silla|mesa|carpa|equipo|alquil/.test(m)) {
+    const alqTotal = S.inventario.reduce((a,i)=>a+i.alq*i.valAlq,0);
+    const mant = S.inventario.filter(i=>i.est==='Mantenimiento');
+    return `📦 Inventario: <strong>${S.inventario.length} ítems</strong> por valor de <strong>${fmt(d.valInv)}</strong><br>• Ingreso actual por alquiler: ${fmt(alqTotal)}<br>• Disponibles: ${S.inventario.filter(i=>i.est==='Disponible').length} | Alquilados: ${S.inventario.filter(i=>i.est==='Alquilado').length} | Mantenimiento: ${mant.length}${mant.length>0?`<br>⚠️ En mantenimiento: ${mant.map(i=>i.nom).join(', ')}` :''}`;
+  }
+
+  // ── EVENTOS ──
+  if(/evento|boda|quince|grado|corpor|cuántos evento/.test(m)) {
+    const conf=S.eventos.filter(e=>e.estado==='Confirmado');
+    const valTotal=S.eventos.reduce((a,e)=>a+e.val,0);
+    return `🗓 Tienes <strong>${S.eventos.length} eventos</strong> registrados por un valor total de <strong>${fmt(valTotal)}</strong>.<br>• Confirmados: ${conf.length} | En proceso: ${S.eventos.filter(e=>e.estado==='En proceso').length} | Realizados: ${S.eventos.filter(e=>e.estado==='Realizado').length}<br>• Próximo: ${conf[0]?conf[0].nom+' — '+conf[0].fecha:'ninguno confirmado'}<br>• Ticket promedio por evento: ${fmt(valTotal/Math.max(1,S.eventos.length))}`;
+  }
+
+  // ── FLUJO DE CAJA / MEJORAS ──
+  if(/flujo|mejorar|mejor|recomend|consejo|qué hago|qué debo/.test(m)) {
+    const tips=[];
+    if(d.cart>3000000) tips.push(`🔴 Cobra la cartera de <strong>${fmt(d.cart)}</strong> — es dinero tuyo que ya ganaste`);
+    if(d.nom/d.ing>0.4) tips.push(`🟡 La nómina es el ${Math.round(d.nom/d.ing*100)}% de tus ingresos — considera optimizar`);
+    if(d.facVenc.length>0) tips.push(`⚠️ Gestiona las ${d.facVenc.length} facturas vencidas cuanto antes`);
+    if(d.saldo<2000000) tips.push(`🔴 Saldo bajo (${fmt(d.saldo)}) — prioriza cobros antes de pagar`);
+    if(tips.length===0) tips.push(`✅ El negocio está bien — mantén el flujo de cobros puntual y provisiona prestaciones mensualmente`);
+    return `💡 <strong>Recomendaciones para Hored:</strong><br>${tips.join('<br>')}`;
+  }
+
+  // ── COSTO EMPLEADO ──
+  if(/costo.*emplead|costo.*colabor|cuánto.*cuesta.*emplead|real.*emplead/.test(m)) {
+    const detalle=S.empleados.map(e=>`• ${e.nom}: salario ${fmt(e.sal)} → costo real <strong>${fmt(calcCostoEmpresa(e))}</strong>`).join('<br>');
+    return `🏢 Costo real por empleado (salario + aportes + prestaciones):<br>${detalle}<br>• <strong>Total empresa/mes: ${fmt(d.costoEmp)}</strong>`;
+  }
+
+  // ── PROVEEDORES ──
+  if(/proveedor|flores|catering|sonido|mobiliario/.test(m)) {
+    const top=S.proveedores.sort((a,b)=>b.cal-a.cal).slice(0,3);
+    return `🏭 Tienes <strong>${S.proveedores.length} proveedores</strong> registrados.<br>Top calificados:<br>${top.map(p=>`• ${'★'.repeat(p.cal)} ${p.emp} — ${p.serv} (${p.con})`).join('<br>')}`;
+  }
+
+  // ── HOLA / SALUDO ──
+  if(/hola|buenas|buen dia|qué tal|hey/.test(m)) {
+    const hora=new Date().getHours();
+    const emoji = hora<12?'☀️':hora<18?'🌤️':'🌙';
+    const saludo = hora<12?'¡Buenos días':hora<18?'¡Buenas tardes':'¡Buenas noches';
+    return emoji+' '+saludo+'! Estoy listo para ayudarte con Hored Eventos.<br>Tu negocio tiene hoy: <strong>'+fmt(d.saldo)+'</strong> disponible, <strong>'+S.eventos.filter(e=>e.estado==='Confirmado').length+'</strong> eventos confirmados y <strong>'+fmt(d.cart)+'</strong> en cartera por cobrar.<br>¿Qué necesitas consultar?';
+  }
+
+  // ── RESPUESTA GENERAL ──
+  const dato = `Ingresos ${fmt(d.ing)} · Egresos ${fmt(d.egr)} · Saldo ${fmt(d.saldo)} · Cartera ${fmt(d.cart)} · Nómina ${fmt(d.nom)}`;
+  return `📊 Resumen de Hored ERP al día de hoy:<br>• ${dato}<br>• Margen operacional: <strong>${d.margen}%</strong><br>• Colaboradores: ${S.empleados.length} | Eventos activos: ${S.eventos.filter(e=>e.estado!=='Realizado'&&e.estado!=='Cancelado').length}<br><br>Puedes preguntarme por caja, cartera, nómina, prestaciones, eventos, inventario o pedir recomendaciones financieras.`;
+}
+
+async function sendChat() {
+  const inp = document.getElementById('chat-in');
+  const msg = inp.value.trim(); if(!msg) return;
+  addChatMsg('user', msg); inp.value='';
+
+  const typing = document.createElement('div');
+  typing.className='chat-msg ai';
+  typing.innerHTML='<span class="ai-badge">✦ ASISTENTE IA</span><div class="ai-typing"><span></span><span></span><span></span></div>';
+  document.getElementById('chat-area').appendChild(typing);
+  document.getElementById('chat-area').scrollTop=99999;
+
+  // Simula tiempo de "pensamiento" (500-900ms) para UX natural
+  await new Promise(r=>setTimeout(r,500+Math.random()*400));
+  typing.remove();
+  addChatMsg('ai', respuestaIA(msg));
+}
+
+function imprimirColilla() { window.print(); }
+
+// ═══════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded',()=>{
+  renderFacItems_init();
+  populateClienteSelects();
+  renderDashboard();
+  document.getElementById('mv-fecha').value = today();
+  document.getElementById('rec-fecha').value = today();
+  document.getElementById('fac-fecha').value = today();
+});
+</script>
+
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  PWA — Install Prompt + Offline Cache + Mobile Menu
+// ═══════════════════════════════════════════════════════
+
+// Service Worker no disponible en file:// (requiere HTTPS)
+
+// ── Install Prompt ──
+var _deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', function(e) {
+  e.preventDefault();
+  _deferredPrompt = e;
+  var btn = document.getElementById('pwa-install-btn');
+  if (btn) btn.style.display = 'flex';
+});
+
+window.addEventListener('appinstalled', function() {
+  var btn = document.getElementById('pwa-install-btn');
+  if (btn) btn.style.display = 'none';
+  toast('Hored ERP instalado como app');
+});
+
+function installPWA() {
+  if (!_deferredPrompt) {
+    toast('Toca los 3 puntos del navegador → Instalar app / Agregar a inicio');
+    return;
+  }
+  _deferredPrompt.prompt();
+  _deferredPrompt.userChoice.then(function(r) {
+    if (r.outcome === 'accepted') toast('Hored ERP instalado');
+    _deferredPrompt = null;
+    var btn = document.getElementById('pwa-install-btn');
+    if (btn) btn.style.display = 'none';
+  });
+}
+
+// ── Mobile Sidebar ──
+function toggleSidebar() {
+  document.getElementById('sb').classList.toggle('sb-open');
+}
+
+document.addEventListener('click', function(e) {
+  var sb = document.getElementById('sb');
+  var btn = document.getElementById('menu-btn');
+  if (!sb || !btn) return;
+  if (sb.classList.contains('sb-open') && !sb.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+    sb.classList.remove('sb-open');
+  }
+});
+
+// Close sidebar when nav item tapped on mobile
+document.querySelectorAll('.ni').forEach(function(ni) {
+  ni.addEventListener('click', function() {
+    if (window.innerWidth < 768) {
+      document.getElementById('sb').classList.remove('sb-open');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
